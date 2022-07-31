@@ -82,12 +82,12 @@ const Navbar = () => {
                 <div style={styling.links}>
                     <img src={Logo} style={{height: '25px', width: '70px', marginRight: '2rem'}} alt='Logo'/>
                     <a href='/' style={{textDecoration: 'none', color: '#bfbfbf'}}>Home</a>
-                    <a href='/#catalogue' style={{textDecoration: 'none', color: '#bfbfbf'}}>Catalogue</a>
-                    <a href='/theforest' style={{textDecoration: 'none', color: '#bfbfbf'}}>Contact Us</a>
+                    <a href='/catalogue' style={{textDecoration: 'none', color: '#bfbfbf'}}>Catalogue</a>
+                    <a href='/' style={{textDecoration: 'none', color: '#bfbfbf'}}>Contact Us</a>
                 </div>
 
                 <Socials>
-                    <a href='https://twitter.com/KoalaKrewNFT'><FontAwesomeIcon icon={faTwitter} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
+                    <a href='#'><FontAwesomeIcon icon={faTwitter} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
                     <a href='#'><FontAwesomeIcon icon={faInstagram} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
                     <a href='#'><FontAwesomeIcon icon={faDiscord} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
                 </Socials>

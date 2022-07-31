@@ -1,17 +1,17 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
-import Navbar from "./components/Navbar";
+import LandingPage from "./components/LandingPage/LandingPage";
+import Catalogue from './components/Catalogue/Catalogue';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header>
-      <Navbar/>
-        <p>
-          Argol Site
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/catalogue' element={<Catalogue/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
