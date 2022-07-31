@@ -87,9 +87,9 @@ const Navbar = () => {
                 </div>
 
                 <Socials>
-                    <a href='#'><FontAwesomeIcon icon={faTwitter} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
-                    <a href='#'><FontAwesomeIcon icon={faInstagram} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
-                    <a href='#'><FontAwesomeIcon icon={faDiscord} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
+                    <a href='/'><FontAwesomeIcon icon={faTwitter} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
+                    <a href='/'><FontAwesomeIcon icon={faInstagram} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
+                    <a href='/'><FontAwesomeIcon icon={faDiscord} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
                 </Socials>
             </Container>
         )
