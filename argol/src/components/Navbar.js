@@ -83,7 +83,7 @@ const Navbar = () => {
                     <img src={Logo} style={{height: '35px', width: '70px', marginRight: '2rem'}} alt='Logo'/>
                     <a href='/' style={{textDecoration: 'none', color: '#bfbfbf'}}>Home</a>
                     <a href='/catalogue' style={{textDecoration: 'none', color: '#bfbfbf'}}>Catalogue</a>
-                    <a href='/' style={{textDecoration: 'none', color: '#bfbfbf'}}>Contact Us</a>
+                    <a href='/contactus' style={{textDecoration: 'none', color: '#bfbfbf'}}>Contact Us</a>
                 </div>
 
                 <Socials>

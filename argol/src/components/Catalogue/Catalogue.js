@@ -1,60 +1,50 @@
-import React, { Image, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import Navbar from '../Navbar';
-import styled from 'styled-components';
+import Product from '../Product/Product';
 import Paintbrush1 from '../../assets/paintbrush1.png';
 
-const ProductHeader = styled.h2`
-    color: black;
-    size: 10px;
-`
-
-const Container = styled.div`
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    padding: 3rem 0rem 3rem;
-`
-
-const ImageBox = styled.div`
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    margin: 0rem 0rem 0rem;
-`
+const data = [{  
+        cat: '67 113',  
+        size: '1"',
+        qty: "12 doz"  
+    },{  
+        cat: '67 114',  
+        size: '1"',
+        qty: "12 doz"  
+    },{
+        cat: '67 115',  
+        size: '2"',
+        qty: "12 doz"  
+}]   
 
 const Catalogue = () => {
     return (
     <Fragment>
         <Navbar/>
-        <Container>
-            <ProductHeader>
-                DeLuxe Flat Paint Brush
-            </ProductHeader>
-        </Container>
-        <Container>
-            <ImageBox>
-                <img src={Paintbrush1}/>
-            </ImageBox>
-            <ImageBox>
-                <ul>
-                    <li>
-                        Suitable for all paints.
-                    </li>
-                    <li>
-                        Ideal for enamel paint
-                    </li>
-                    <li>
-                        Wood handle
-                    </li>
-                    <li>
-                        Good blend of pure bristles
-                    </li>
-                </ul>
-            </ImageBox>
-        </Container>
+        <Product header="DeLuxe Flat Paint Brush" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Varnish Brush" img={Paintbrush1} data={data}/>
+        <Product header="Classic Flat Paint Brush" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Pointed Brush" img={Paintbrush1} data={data}/>
+        {/* 8 types of deluxe refills */}
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
+
+        {/* 5 types of classic refills */}
+        <Product header="Classic Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="Classic Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="Classic Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="Classic Range Refills" img={Paintbrush1} data={data}/>
+        <Product header="Classic Range Refills" img={Paintbrush1} data={data}/>
+
+        <Product header="DeLuxe Paint Brush" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Paint Brush" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Paint Brush" img={Paintbrush1} data={data}/>
     </Fragment>
     )
 }
