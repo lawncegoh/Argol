@@ -15,15 +15,43 @@ const data = [{
         cat: '67 115',  
         size: '2"',
         qty: "12 doz"  
-}]   
+}]
+
+const varnishbrush = [{  
+    cat: '67 113',  
+    size: '1"',
+    qty: "12 doz"  
+},{  
+    cat: '67 114',  
+    size: '1"',
+    qty: "12 doz"  
+},{
+    cat: '67 115',  
+    size: '2"',
+    qty: "12 doz"  
+}]
+
+const flatpaintbrush = [{  
+    cat: '67 113',  
+    size: '1"',
+    qty: "12 doz"  
+},{  
+    cat: '67 114',  
+    size: '1"',
+    qty: "12 doz"  
+},{
+    cat: '67 115',  
+    size: '2"',
+    qty: "12 doz"  
+}]
 
 const Catalogue = () => {
     return (
     <Fragment>
         <Navbar/>
         <Product header="DeLuxe Flat Paint Brush" img={Paintbrush1} data={data}/>
-        <Product header="DeLuxe Varnish Brush" img={Paintbrush1} data={data}/>
-        <Product header="Classic Flat Paint Brush" img={Paintbrush1} data={data}/>
+        <Product header="DeLuxe Varnish Brush" img={Paintbrush1} data={varnishbrush}/>
+        <Product header="Classic Flat Paint Brush" img={Paintbrush1} data={flatpaintbrush}/>
         <Product header="DeLuxe Pointed Brush" img={Paintbrush1} data={data}/>
         {/* 8 types of deluxe refills */}
         <Product header="DeLuxe Range Refills" img={Paintbrush1} data={data}/>
