@@ -1,13 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-   
-const Box = styled.div`
-  background: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-`;
-   
+     
 const Container = styled.div`
     display: flex;
     flex-direction: column;

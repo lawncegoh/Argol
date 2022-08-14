@@ -26,6 +26,9 @@ const IndivBox = styled.div`
     flex-direction: column;
     margin: 0rem 1rem 5rem;
     align-items: center;
+    -moz-box-shadow:    3px 3px 5px 5px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 5px #ccc;
+    box-shadow:         3px 3px 5px 5px #ccc;
 `
 const ImageBox = styled.div`
     width: 25%;
