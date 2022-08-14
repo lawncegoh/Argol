@@ -11,14 +11,14 @@ const Container = styled.div`
     margin: auto;
     padding: 0rem 0rem 0rem;
 `
-const IndivBoxes = styled.div`
+const IndivBox = styled.div`
     width: 100%;
+    background: #D4F1F4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10%;
-    padding: 0rem 0rem 0rem;
-    border-style: double;
+    padding: 20px;
 `
 const ImageBox = styled.div`
     width: 25%;
@@ -31,6 +31,24 @@ const ImageBox = styled.div`
     gap: 0rem;
 `
 
+const PageHeader = styled.h2`
+    color: black;
+    padding: 0rem 0rem 5rem;
+    text-align: center;
+`
+
+const TextHeader = styled.h4`
+    color: black;
+    padding: 0rem 0rem 5rem;
+    text-align: center;
+`
+
+const TextPara = styled.h4`
+    color: grey;
+    padding: 0rem 0rem 0rem;
+    text-align: center;
+`
+
 const ContactUs = () => {
     return (
         <Fragment>
@@ -38,18 +56,16 @@ const ContactUs = () => {
             <ImageBox>
                 <img src={Combinedlogos}/>
             </ImageBox>
+            <PageHeader>We'd love to hear your questions.</PageHeader>
             <Container>
-                <h2>We'd love to hear your questions.</h2>
-            </Container>
-            <Container>
-                <IndivBoxes>
-                    <h4>Talk to Sales</h4>
-                    <p>sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</p>
-                </IndivBoxes>
-                <IndivBoxes>
-                    <h4>Contact Customer Support</h4>
-                    <p>(+65) 96839120</p>
-                </IndivBoxes>    
+                <IndivBox>
+                    <TextHeader>Talk to Sales</TextHeader>
+                    <TextPara>sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</TextPara>
+                </IndivBox>
+                <IndivBox>
+                    <TextHeader>Contact Customer Support</TextHeader>
+                    <TextPara>(+65) 96839120</TextPara>
+                </IndivBox>    
             </Container>
         </Fragment>
     )

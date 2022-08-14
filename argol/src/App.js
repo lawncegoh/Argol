@@ -4,6 +4,7 @@ import './App.css';
 import LandingPage from "./components/LandingPage/LandingPage";
 import Catalogue from './components/Catalogue/Catalogue';
 import ContactUs from './components/Contact Us/ContactUs';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/catalogue' element={<Catalogue/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
