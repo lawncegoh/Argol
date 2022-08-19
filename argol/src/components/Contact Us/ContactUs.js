@@ -2,7 +2,7 @@ import React, { Fragment} from 'react';
 import Navbar from '../Navbar';
 import styled from 'styled-components';
 import Combinedlogos from '../../assets/combinedlogos.png';
-import Sales from '../../assets/sales.png';
+import ContactUsBanner from '../../assets/contactus.png';
 
 const HeaderImage = styled.img`
     width: 50%;
@@ -11,13 +11,23 @@ const HeaderImage = styled.img`
 `
 
 const Container = styled.div`
-    width: 90%;
-    height: 100%;
+    width: 1000px;
+    height: 1000px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin: auto;
+    background-size:cover;
 `
+
+const InnerContainer = styled.div`
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-size:cover;
+`
+
 const IndivBox = styled.div`
     width: 100%;
     height: 300px;
@@ -74,21 +84,21 @@ const ContactUs = () => {
     return (
         <Fragment>
             <Navbar/>
-            <ImageBox>
-                <HeaderImage src={Combinedlogos}/>
-            </ImageBox>
-            <PageHeader>We'd love to hear your questions.</PageHeader>
+            <img src={ContactUsBanner}/>
             <Container>
-                <IndivBox>
-                    <IconImage src={Sales}/>
-                    <TextHeader>Talk to Sales</TextHeader>
-                    <TextPara>sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</TextPara>
-                </IndivBox>
-                <IndivBox>
-                    <IconImage src={Sales}/>
-                    <TextHeader>Customer Support</TextHeader>
-                    <TextPara>Contact (+65) 96839120</TextPara>
-                </IndivBox>    
+                <InnerContainer>
+                    <PageHeader>We'd love to hear your questions.</PageHeader>
+                    <IndivBox>
+                        <IconImage src={Combinedlogos}/>
+                        <TextHeader>Talk to Sales</TextHeader>
+                        <TextPara>sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</TextPara>
+                    </IndivBox>
+                    <IndivBox>
+                        <IconImage src={Combinedlogos}/>
+                        <TextHeader>Customer Support</TextHeader>
+                        <TextPara>Contact (+65) 96839120</TextPara>
+                    </IndivBox>   
+                </InnerContainer> 
             </Container>
         </Fragment>
     )

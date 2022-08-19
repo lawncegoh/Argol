@@ -126,6 +126,7 @@ margin-bottom: 4rem;
 const Catalogue = () => {
     return (
         <Fragment>
+            <Navbar/>
             {/* <Display>
 
                 <Background src={require('../../assets/background.jpg')}/>
