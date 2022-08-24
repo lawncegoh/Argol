@@ -2,10 +2,6 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 import './Catalogue.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faPaintBrush
-} from '@fortawesome/free-solid-svg-icons'
 
 const paintbrush_Data = [
     {
@@ -17,6 +13,44 @@ const paintbrush_Data = [
             third: "Wood handle",
             fourth: "Good blend of pure bristles"
         },
+        sizing: [
+            {
+                catNo: "67 113",
+                size: "1/2",
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "67 125",
+                size: "1",
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "67 138",
+                size: "1 1/2",
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "67 150",
+                size: "2",
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "67 163",
+                size: "2 1/2",
+                quantity: "6 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "67 175",
+                size: "3",
+                quantity: "6 doz",
+                background_colour: "#ffff99"
+            },
+        ]
     },
     // {
     //     model: "Classic Flat Paint Brush",
@@ -51,10 +85,22 @@ const paintbrush_Data = [
     //         fifth: "Fine finishing coat"
     //     },
     // },
+    // {
+    //     model: "DeLuxe Range Refill",
+    //     imageUrl: require('../../assets/paintbrush1.png'),
+    //     description: {
+    //         first: "Suitable for all paints",
+    //         second: "Ultra fabric by Argol wear-resistant on semi and rough surfaces",
+    //         third: "Good paint absorption and dispersion",
+    //         fourth: "Bigger paint coverage area",
+    //         fifth: "Minimised paint splattering while rolling",
+    //         sixth: "Ideal for exterior painting"    
+    //     },
+
 ]
 
 const Container = styled.div`
-width: 70%;
+width: 80%;
 height: 100%;
 margin: 0rem auto 10rem;
 display: flex;
@@ -78,19 +124,20 @@ margin: auto;
 const Description = styled.div`
 display: flex;
 flex-direction: column;
-width: 30%;
-height: 100%;
+width: 100%;
+height: auto;
 padding: 10px 20px;
 background-color: #edeef0;
 border-radius: 10px;
 letter-spacing: 1px;
 justify-content: center;
-margin-right: 10%;
+margin-bottom: 2.5rem;
+margin-top: 1.5rem;
 `
 
 const Image = styled.img`
 width: 55%;
-height: 60%;
+height: 70%;
 `
 
 const Category = styled.p`
@@ -101,62 +148,75 @@ text-align: center;
 margin-bottom: 4rem;
 `
 
+const Sizing = styled.div`
+display: flex;
+justify-content: center;
+text-align: center;
+width: 100%;
+height: 180px;
+`
 
-// const Display = styled.div`
-// width: 90%;
-// height: 100vh;
-// margin: auto;
-// position: relative;
-// `
+const styling = {
+    right: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '40%',
+        height: '100%'
+    },
+    tableColor: {
+        
+    }
+}
 
-// const Tagline = styled.div`
-// display: flex;
-// flex-direction: column;
-// position: absolute;
-// bottom: 10%;
-// right: 6%;
-// text-align: flex-start;
-// `
-
-// const Background = styled.img`
-// width: 100%;
-// height: 100vh;
-// `
 
 const Catalogue = () => {
     return (
         <Fragment>
-            <Navbar/>
-            {/* <Display>
-
-                <Background src={require('../../assets/background.jpg')}/>
-
-                <Tagline>
-                    <p style={{letterSpacing: '2px', fontSize: '20px'}}>Before You Start,<br/>Think Of The Finish</p>
-                </Tagline>
-            </Display> */}
+            <Navbar />
             <Category>Brushes</Category>
             {paintbrush_Data.map((data) => {
                 return (
                     <Container>
-                        {/* Landing page for the Catalogue */}
-
                         {/* Model name */}
                         <Model>
-                            <p style={{fontSize: '26px', letterSpacing: '1.5px'}}>{data.model}</p>
+                            <p style={{ fontSize: '26px', letterSpacing: '1.5px' }}>{data.model}</p>
                         </Model>
                         {/* Main content (image and description) */}
                         <Content>
                             {/* Image */}
                             <Image src={data.imageUrl} />
                             {/* Product description */}
-                            <Description>
-                                <p>{data?.description?.first}</p>
-                                <p>{data?.description?.second}</p>
-                                <p>{data?.description?.third}</p>
-                                <p>{data?.description?.fourth}</p>
-                                <p>{data?.description?.fifth}</p>
-                            </Description>
+                            <div style={styling.right}>
+                                <Description>
+                                    <p>{data?.description?.first}</p>
+                                    <p>{data?.description?.second}</p>
+                                    <p>{data?.description?.third}</p>
+                                    <p>{data?.description?.fourth}</p>
+                                    <p>{data?.description?.fifth}</p>
+                                </Description>
+                                <Sizing>
+                                    <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', border: '2px solid black'}}>
+                                        <thead>
+                                            <tr>
+                                                <th >Cat No.</th>
+                                                <th>Size</th>
+                                                <th>Quantity</th>
+                                            </tr>
+                                        </thead>
+                                        {data?.sizing?.map((size) => {
+                                            return (
+                                                <tbody style={{backgroundColor: size.background_colour}}>
+                                                    <tr>
+                                                        <td>{size.catNo}</td>
+                                                        <td>{size.size}</td>
+                                                        <td>{size.quantity}</td>
+                                                    </tr>
+                                                </tbody>
+                                            )
+                                        })}
+                                    </table>
+                                </Sizing>
+                            </div>
                         </Content>
                     </Container>
                 )
