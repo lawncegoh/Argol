@@ -7,12 +7,20 @@ const paintbrush_Data = [
     {
         model: "DeLuxe Flat",
         imageUrl: require('../../assets/paintbrush1.png'),
-        description: {
-            first: "Suitable for all paints",
-            second: "Ideal for enamel paint",
-            third: "Wood handle",
-            fourth: "Good blend of pure bristles"
-        },
+        description: [
+            {
+                value : "Suitable for all paints"
+            },
+            {
+                value : "Ideal for enamel paint"
+            },
+            {
+                value: "Wood Handle"
+            },
+            {
+                value: "Good blend of pure bristles"
+            }
+        ],
         sizing: [
             {
                 catNo: "67 113",
@@ -109,8 +117,11 @@ flex-direction: column;
 
 const Model = styled.div`
 width: 100%;
-text-align: left;
+display: flex;
+justify-content: center;
 margin-bottom: 4rem;
+background-color: #e9851c;
+height: 60px;
 `
 
 const Content = styled.div`
@@ -125,14 +136,12 @@ const Description = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
-height: auto;
-padding: 10px 20px;
-background-color: #edeef0;
-border-radius: 10px;
 letter-spacing: 1px;
 justify-content: center;
-margin-bottom: 2.5rem;
-margin-top: 1.5rem;
+margin: auto;
+list-style-position: inside;
+margin-bottom: 3px;
+font-size: 18px;
 `
 
 const Image = styled.img`
@@ -140,13 +149,6 @@ width: 55%;
 height: 70%;
 `
 
-const Category = styled.p`
-font-size: 72px;
-letter-spacing: 10px;
-color: #bdbdbd;
-text-align: center;
-margin-bottom: 4rem;
-`
 
 const Sizing = styled.div`
 display: flex;
@@ -154,6 +156,7 @@ justify-content: center;
 text-align: center;
 width: 100%;
 height: 180px;
+margin-top: 2rem;
 `
 
 const styling = {
@@ -161,11 +164,10 @@ const styling = {
         display: 'flex',
         flexDirection: 'column',
         width: '40%',
-        height: '100%'
+        height: '100%',
+        justifyContent: 'space-between',
+        marginTop: '1rem'
     },
-    tableColor: {
-        
-    }
 }
 
 
@@ -173,13 +175,12 @@ const Catalogue = () => {
     return (
         <Fragment>
             <Navbar />
-            <Category>Brushes</Category>
             {paintbrush_Data.map((data) => {
                 return (
                     <Container>
                         {/* Model name */}
                         <Model>
-                            <p style={{ fontSize: '26px', letterSpacing: '1.5px' }}>{data.model}</p>
+                            <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>{data.model}</p>
                         </Model>
                         {/* Main content (image and description) */}
                         <Content>
@@ -187,29 +188,31 @@ const Catalogue = () => {
                             <Image src={data.imageUrl} />
                             {/* Product description */}
                             <div style={styling.right}>
-                                <Description>
-                                    <p>{data?.description?.first}</p>
-                                    <p>{data?.description?.second}</p>
-                                    <p>{data?.description?.third}</p>
-                                    <p>{data?.description?.fourth}</p>
-                                    <p>{data?.description?.fifth}</p>
-                                </Description>
+                                {data?.description?.map((description_data) => {
+                                    return (
+                                        <Description>
+                                            <ul>
+                                                <li>{description_data.value}</li>
+                                            </ul>
+                                        </Description>
+                                    )
+                                })}
                                 <Sizing>
-                                    <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', border: '2px solid black'}}>
+                                    <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto',  borderCollapse: 'collapse', border: '2px solid blaCK'}}>
                                         <thead>
-                                            <tr>
-                                                <th >Cat No.</th>
-                                                <th>Size</th>
-                                                <th>Quantity</th>
+                                            <tr style={{backgroundColor: '#aaddef', height: '25px'}}>
+                                                <th style={{border: '1px solid black'}}>Cat No.</th>
+                                                <th style={{border: '1px solid black'}}>Size</th>
+                                                <th style={{border: '1px solid black'}}>Quantity</th>
                                             </tr>
                                         </thead>
                                         {data?.sizing?.map((size) => {
                                             return (
                                                 <tbody style={{backgroundColor: size.background_colour}}>
                                                     <tr>
-                                                        <td>{size.catNo}</td>
-                                                        <td>{size.size}</td>
-                                                        <td>{size.quantity}</td>
+                                                        <td style={{border: '1px solid black'}}>{size.catNo}</td>
+                                                        <td style={{border: '1px solid black'}}>{size.size}</td>
+                                                        <td style={{border: '1px solid black'}}>{size.quantity}</td>
                                                     </tr>
                                                 </tbody>
                                             )
