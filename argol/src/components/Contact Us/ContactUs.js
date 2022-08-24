@@ -2,21 +2,19 @@ import React, { Fragment} from 'react';
 import Navbar from '../Navbar';
 import styled from 'styled-components';
 import Combinedlogos from '../../assets/combinedlogos.png';
-import ContactUsBanner from '../../assets/contactus.png';
+import ContactUsPic from '../../assets/contactus.jpg';
 
 const HeaderImage = styled.img`
-    width: 50%;
+    width: 40%;
     display; flex;
-    margin: auto;
 `
 
 const Container = styled.div`
-    width: 1000px;
-    height: 1000px;
     display: flex;
     justify-content: center;
     margin: auto;
     background-size:cover;
+    text-align: center;
 `
 
 const InnerContainer = styled.div`
@@ -74,18 +72,35 @@ const TextPara = styled.div`
     font-size: 15px;
 `
 
-const IconImage = styled.img`
-    width: 15%;
-    display; flex;
-    margin: auto;
+const InfoContainer = styled.div`
+    position:absolute;
+    top: //As per need;
+    overflow: hidden;
+`
+
+const SalesWords = styled.div`
+    float: left;
+    margin-top: 60%;
+    margin-left: 60%;
+    font-size: 80%;
+    background: yellow;
 `
 
 const ContactUs = () => {
     return (
         <Fragment>
             <Navbar/>
-            <img src={ContactUsBanner}/>
             <Container>
+                <HeaderImage src={ContactUsPic}/>
+                <InfoContainer>
+                    <SalesWords>
+                        <h4>Talk to Sales </h4>
+                        <p>sales_argol@singnet.com.sg</p>
+                        <p>lgoh_argol@singnet.com.sg</p>
+                    </SalesWords>
+                </InfoContainer>
+            </Container>
+            {/* <Container>
                 <InnerContainer>
                     <PageHeader>We'd love to hear your questions.</PageHeader>
                     <IndivBox>
@@ -99,7 +114,7 @@ const ContactUs = () => {
                         <TextPara>Contact (+65) 96839120</TextPara>
                     </IndivBox>   
                 </InnerContainer> 
-            </Container>
+            </Container> */}
         </Fragment>
     )
 }
