@@ -5,7 +5,9 @@ import Combinedlogos from '../../assets/combinedlogos.png';
 import ContactUsPic from '../../assets/contactus.jpg';
 
 const HeaderImage = styled.img`
-    width: 40%;
+    height: auto;
+    width: 100%;
+    max-width: 600px;
     display; flex;
 `
 
@@ -80,10 +82,13 @@ const InfoContainer = styled.div`
 
 const SalesWords = styled.div`
     float: left;
-    margin-top: 60%;
-    margin-left: 60%;
-    font-size: 80%;
+    margin-top: 70%;
+    margin-left: 50%;
+    font-size: 1.5vw;
     background: yellow;
+    -moz-box-shadow:    3px 3px 5px 5px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 5px #ccc;
+    box-shadow:         3px 3px 5px 5px #ccc;
 `
 
 const ContactUs = () => {
@@ -97,6 +102,9 @@ const ContactUs = () => {
                         <h4>Talk to Sales </h4>
                         <p>sales_argol@singnet.com.sg</p>
                         <p>lgoh_argol@singnet.com.sg</p>
+                        <br/>
+                        <h4>Customer Support</h4>
+                        <p>(+65) 96839120</p>
                     </SalesWords>
                 </InfoContainer>
             </Container>
