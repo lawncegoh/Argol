@@ -6,7 +6,7 @@ import ContactUsPic from '../../assets/contactus.jpg';
 
 const HeaderImage = styled.img`
     height: auto;
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     display; flex;
 `

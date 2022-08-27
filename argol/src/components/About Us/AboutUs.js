@@ -1,107 +1,150 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
-import AboutUsBanner from '../../assets/aboutus.png';
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    background-size:cover;
+width: 60%;
+margin: 0rem auto 3rem;
+text-align: justify;
+border: 1px solid rgba(0,0,0,0.1);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+-moz-box-shadow:    3px 3px 5px 5px #ccc;
+-webkit-box-shadow: 3px 3px 5px 5px #ccc;
+box-shadow:         3px 3px 5px 5px #ccc;
 `
 
-const WordsContainer = styled.div`
-    width: 1000px;
-    height: 1000px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-
+const MobileContainer = styled.div`
+width: 85%;
+margin: 0rem auto 3rem;
+text-align: justify;
+border: 1px solid rgba(0,0,0,0.1);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+-moz-box-shadow:    3px 3px 5px 5px #ccc;
+-webkit-box-shadow: 3px 3px 5px 5px #ccc;
+box-shadow:         3px 3px 5px 5px #ccc;
 `
 
-const PageHeader = styled.div`
-    display: flex;
-    margin: auto;
-    width: 100%;
-    background: grey;
+
+
+const Content = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: auto;
+width: 70%;
+margin-bottom: 2.5rem;
 `
 
-const InnerContainer = styled.div`
-    display: flex;
-    margin: auto;
-    width: 70%;
-    height: 80%;
-    background: white;
-    flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    -moz-box-shadow:    3px 3px 5px 5px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 5px #ccc;
-    box-shadow:         3px 3px 5px 5px #ccc;
+const MobileContent = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: auto;
+width: 80%;
+margin-bottom: 2.5rem;
 `
 
-const InnerHeader = styled.div`
-    color: black;
-    margin: auto;
-    font-weight: bold;
-`
-
-const InnerPara = styled.div`
-    color: black;
-    margin: auto;
-    width: 80%;
+const Heading = styled.p`
+text-align: center;
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 1.5rem;
 `
 
 const AboutUs = () => {
+
+    const [state, setState] = useState({
+        mobileView: false,
+    });
+
+    const { mobileView } = state;
+
+    useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 1100
+                ? setState((prevState) => ({ ...prevState, mobileView: true }))
+                : setState((prevState) => ({ ...prevState, mobileView: false }));
+        };
+
+        setResponsiveness();
+        window.addEventListener("resize", () => setResponsiveness());
+
+        return () => {
+            window.removeEventListener("resize", () => setResponsiveness());
+        }
+    }, []);
+
+    const displayDesktop = () => {
+        return (
+            <Fragment>
+                <Navbar />
+                <Container>
+                    <Content style={{ marginTop: '3rem' }}>
+                        <Heading>Who we are</Heading>
+                        <p>Established in 2003, Argol is probably the market's favourite decorating brand. Innovation is the company's passion and this can be seen in
+                            brushes, rollers and tools. Hence, Argol's competitive advantages lie solely in innovation and product differentiations.</p>
+                    </Content>
+                    <Content>
+                        <Heading>Our Experiences and Product Knowledge</Heading>
+                        <p>The founder of this company had worked in/worked with well-known brands like Harris, Mosley Stone, Friess, FIA, America Brush Company,
+                            Stanley, Cristin and others since 1986.</p>
+                    </Content>
+                    <Content>
+                        <Heading>Our Vision</Heading>
+                        <p>Singapore's known decorating brand for its fine finishing and performance since 2003. Since then, we have been helping professional painters
+                            to save costs and users to accept better; their painting finishing. We provide a range of paint rollers, paint brushes and painting tools.</p>
+                    </Content>
+                    <Content>
+                        <Heading>Our Aim</Heading>
+                        <p>To help Painting Contractors make painting/repairing and decorating easier. Saving time and costs; less time and less paint coat. More acceptance
+                            and no rejection.</p>
+                    </Content>
+                    <Content>
+                        <Heading>Our Philosophy</Heading>
+                        <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>We do not believe in "The Best" but only "The Better"</p>
+                    </Content>
+                </Container>
+            </Fragment>
+        )
+    }
+
+    const displayMobile = () => {
+        return (
+            <Fragment>
+                <Navbar />
+                <MobileContainer>
+                    <MobileContent style={{ marginTop: '3rem' }}>
+                        <Heading>Who we are</Heading>
+                        <p>Established in 2003, Argol is probably the market's favourite decorating brand. Innovation is the company's passion and this can be seen in
+                            brushes, rollers and tools. Hence, Argol's competitive advantages lie solely in innovation and product differentiations.</p>
+                    </MobileContent>
+                    <MobileContent>
+                        <Heading>Our Experiences and Product Knowledge</Heading>
+                        <p>The founder of this company had worked in/worked with well-known brands like Harris, Mosley Stone, Friess, FIA, America Brush Company,
+                            Stanley, Cristin and others since 1986.</p>
+                    </MobileContent>
+                    <MobileContent>
+                        <Heading>Our Vision</Heading>
+                        <p>Singapore's known decorating brand for its fine finishing and performance since 2003. Since then, we have been helping professional painters
+                            to save costs and users to accept better; their painting finishing. We provide a range of paint rollers, paint brushes and painting tools.</p>
+                    </MobileContent>
+                    <MobileContent>
+                        <Heading>Our Aim</Heading>
+                        <p>To help Painting Contractors make painting/repairing and decorating easier. Saving time and costs; less time and less paint coat. More acceptance
+                            and no rejection.</p>
+                    </MobileContent>
+                    <MobileContent>
+                        <Heading>Our Philosophy</Heading>
+                        <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>We do not believe in "The Best" but only "The Better"</p>
+                    </MobileContent>
+                </MobileContainer>
+            </Fragment>
+        )
+    }
+
     return (
         <Fragment>
-            <Navbar/>
-            <Container>
-                <img src={AboutUsBanner}/>
-            </Container>
-            <WordsContainer>
-                <InnerContainer>
-                    <InnerHeader>
-                        <p>Who We Are</p>
-                    </InnerHeader>
-                    <InnerPara>
-                        <p>Established in 2003, Argol is probably the market's favourite decorating brand. Innovation is the company's passion and this can be seen in
-                        brushes, rollers and tools. Hence, Argol's competitive advantages lie solely in innovation and product differentiations.</p>
-                    </InnerPara>
-                    <InnerHeader>
-                        <p>Our Experiences and Product Knowledge</p>
-                    </InnerHeader>
-                    <InnerPara>
-                        <p>The founder of this company had worked in/worked with well-known brands like Harris, Mosley Stone, Friess, FIA, America Brush Company,
-                            Stanley, Cristin and others since 1986.
-                        </p>
-                    </InnerPara>
-                    <InnerHeader>
-                        <p>Our Vision</p>
-                    </InnerHeader>
-                    <InnerPara>
-                        <p>Singapore's known decorating brand for its fine finishing and performance since 2003. Since then, we have been helping professional painters
-                            to save costs and users to accept better; their painting finishing. We provide a range of paint rollers, paint brushes and painting tools.
-                        </p>
-                    </InnerPara>
-                    <InnerHeader>
-                        <p>Our Aim</p>
-                    </InnerHeader>
-                    <InnerPara>
-                        <p>To help Painting Contractors make painting/repairing and decorating easier. Saving time and costs; less time and less paint coat. More acceptance
-                            and no rejection.
-                        </p>
-                    </InnerPara>
-                    <InnerHeader>
-                        <p>Our Philosophy</p>
-                    </InnerHeader>
-                    <InnerPara>
-                        <p>We do not believe in "The Best" but only "The Better"</p>
-                    </InnerPara>
-                </InnerContainer>
-            </WordsContainer>
+            {mobileView ? displayMobile() : displayDesktop()}
         </Fragment>
     )
 }

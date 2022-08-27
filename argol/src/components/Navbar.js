@@ -1,10 +1,5 @@
-import React, { useEffect, useState, Fragment} from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import styled from 'styled-components'
-import {
-    faDiscord,
-    faTwitter,
-    faInstagram
-} from '@fortawesome/free-brands-svg-icons'
 import {
     faBars,
     faTimes
@@ -18,7 +13,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: auto;
-padding: 3rem 0rem 3rem;
+padding: 2.5rem 0rem 2.5rem;
 `
 
 const MobileContainer = styled.div`
@@ -27,23 +22,10 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: 2rem auto 2rem;
+align-items: center;
+
 `
 
-const Socials = styled.div`
-display: flex;
-flex-direction: row;
-width: 12%;
-justify-content: space-around;
-`
-
-const MobileNavbar = styled.div`
-width: 100%;
-height: 100%;
-position: absolute;
-background-color: black;
-z-index: 2;
-overflow: hidden;
-`
 
 const styling = {
     links: {
@@ -52,28 +34,30 @@ const styling = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         color: 'black',
+        alignItems: 'center',
+        margin: 'auto'
     }
 }
 
 const Navbar = () => {
     const [state, setState] = useState({
         mobileView: false,
-      });
-    
-      const { mobileView } = state;
-    
-      useEffect(() => {
+    });
+
+    const { mobileView } = state;
+
+    useEffect(() => {
         const setResponsiveness = () => {
-          return window.innerWidth < 1100
-            ? setState((prevState) => ({ ...prevState, mobileView: true }))
-            : setState((prevState) => ({ ...prevState, mobileView: false }));
+            return window.innerWidth < 1100
+                ? setState((prevState) => ({ ...prevState, mobileView: true }))
+                : setState((prevState) => ({ ...prevState, mobileView: false }));
         };
-    
+
         setResponsiveness();
         window.addEventListener("resize", () => setResponsiveness());
-    
+
         return () => {
-          window.removeEventListener("resize", () => setResponsiveness());
+            window.removeEventListener("resize", () => setResponsiveness());
         }
     }, []);
 
@@ -81,18 +65,12 @@ const Navbar = () => {
         return (
             <Container>
                 <div style={styling.links}>
-                    <img src={Logo} style={{height: '35px', width: '70px', marginRight: '2rem'}} alt='Logo'/>
-                    <a href='/' style={{textDecoration: 'none', color: '#000'}}>Home</a>
-                    <a href='/aboutus' style={{textDecoration: 'none', color: '#000'}}>About Us</a>
-                    <a href='/catalogue' style={{textDecoration: 'none', color: '#000'}}>Products</a>
-                    <a href='/contactus' style={{textDecoration: 'none', color: '#000'}}>Contact Us</a>
+                    <a href='/'><img src={Logo} style={{ height: '35px', width: '75px' }} alt='Logo' /></a>
+                    <a href='/' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Home</a>
+                    <a href='/aboutus' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>About Us</a>
+                    <a href='/catalogue' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Products</a>
+                    <a href='/contactus' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Contact Us</a>
                 </div>
-
-                <Socials>
-                    <a href='/'><FontAwesomeIcon icon={faTwitter} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
-                    <a href='/'><FontAwesomeIcon icon={faInstagram} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
-                    <a href='/'><FontAwesomeIcon icon={faDiscord} style={{color: '#d9d9d9', height: '25px', width: '25px'}}/></a>
-                </Socials>
             </Container>
         )
     }
@@ -112,15 +90,11 @@ const Navbar = () => {
 
         return (
             <MobileContainer>
-                <img src={Logo} style={{height: '25px', width: '130px', marginRight: '2rem'}} alt='Logo'/>
-                {!open && <FontAwesomeIcon icon={faBars} onClick={openNavbar}/>}
-                {open && <FontAwesomeIcon icon={faTimes} onClick={closeNavbar}/>}
-                {open && 
-                <Fragment>
-                    <MobileNavbar>
-
-                    </MobileNavbar>
-                </Fragment>
+                <a href='/'><img src={Logo} style={{ height: '35px', width: '75px', marginRight: '2rem' }} alt='Logo' /></a>
+                {!open && <FontAwesomeIcon icon={faBars} onClick={openNavbar} />}
+                {open && <FontAwesomeIcon icon={faTimes} onClick={closeNavbar} />}
+                {open &&
+                    <p>test</p>
                 }
             </MobileContainer>
         )
