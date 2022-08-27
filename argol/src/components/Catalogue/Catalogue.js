@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 import './Catalogue.css'
@@ -9,10 +9,10 @@ const paintbrush_Data = [
         imageUrl: require('../../assets/paintbrush1.png'),
         description: [
             {
-                value : "Suitable for all paints"
+                value: "Suitable for all paints"
             },
             {
-                value : "Ideal for enamel paint"
+                value: "Ideal for enamel paint"
             },
             {
                 value: "Wood Handle"
@@ -159,6 +159,48 @@ height: 180px;
 margin-top: 2rem;
 `
 
+const MobileContainer = styled.div`
+width: 90%;
+height: 100%;
+margin: 0rem auto 10rem;
+display: flex;
+flex-direction: column;
+`
+
+const MobileModel = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+margin-bottom: 2rem;
+background-color: #e9851c;
+height: 60px;
+`
+
+const MobileContent = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 100%;
+margin: auto;
+`
+
+const MobileDescription = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+letter-spacing: 1px;
+justify-content: center;
+margin: auto;
+list-style-position: inside;
+margin-bottom: 3px;
+font-size: 18px;
+`
+
+const MobileImage = styled.img`
+width: 90%;
+height: 70%;
+`
+
 const styling = {
     right: {
         display: 'flex',
@@ -168,62 +210,158 @@ const styling = {
         justifyContent: 'space-between',
         marginTop: '1rem'
     },
+    mobileRight: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'space-between',
+        marginTop: '1rem'
+    },
 }
 
 
 const Catalogue = () => {
+
+    const [state, setState] = useState({
+        mobileView: false,
+    });
+
+    const { mobileView } = state;
+
+    useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 1100
+                ? setState((prevState) => ({ ...prevState, mobileView: true }))
+                : setState((prevState) => ({ ...prevState, mobileView: false }));
+        };
+
+        setResponsiveness();
+        window.addEventListener("resize", () => setResponsiveness());
+
+        return () => {
+            window.removeEventListener("resize", () => setResponsiveness());
+        }
+    }, []);
+
+    const displayDesktop = () => {
+        return (
+            <Fragment>
+                <Navbar />
+                {paintbrush_Data.map((data) => {
+                    return (
+                        <Container>
+                            {/* Model name */}
+                            <Model>
+                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                            </Model>
+                            {/* Main content (image and description) */}
+                            <Content>
+                                {/* Image */}
+                                <Image src={data.imageUrl} />
+                                {/* Product description */}
+                                <div style={styling.right}>
+                                    {data?.description?.map((description_data) => {
+                                        return (
+                                            <Description>
+                                                <ul>
+                                                    <li>{description_data.value}</li>
+                                                </ul>
+                                            </Description>
+                                        )
+                                    })}
+                                    <Sizing>
+                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity</th>
+                                                </tr>
+                                            </thead>
+                                            {data?.sizing?.map((size) => {
+                                                return (
+                                                    <tbody style={{ backgroundColor: size.background_colour }}>
+                                                        <tr>
+                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                )
+                                            })}
+                                        </table>
+                                    </Sizing>
+                                </div>
+                            </Content>
+                        </Container>
+                    )
+                })}
+            </Fragment>
+        )
+    }
+
+
+    const displayMobile = () => {
+        return (
+            <Fragment>
+                <Navbar />
+                {paintbrush_Data.map((data) => {
+                    return (
+                        <MobileContainer>
+                            {/* Model name */}
+                            <MobileModel>
+                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                            </MobileModel>
+                            {/* Main content (image and description) */}
+                            <MobileContent>
+                                {/* Image */}
+                                <MobileImage src={data.imageUrl} />
+                                {/* Product description */}
+                                <div style={styling.mobileRight}>
+                                    {data?.description?.map((description_data) => {
+                                        return (
+                                            <MobileDescription>
+                                                <ul>
+                                                    <li>{description_data.value}</li>
+                                                </ul>
+                                            </MobileDescription>
+                                        )
+                                    })}
+                                    <Sizing>
+                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity</th>
+                                                </tr>
+                                            </thead>
+                                            {data?.sizing?.map((size) => {
+                                                return (
+                                                    <tbody style={{ backgroundColor: size.background_colour }}>
+                                                        <tr>
+                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                )
+                                            })}
+                                        </table>
+                                    </Sizing>
+                                </div>
+                            </MobileContent>
+                        </MobileContainer>
+                    )
+                })}
+            </Fragment>
+        )
+    }
+
     return (
         <Fragment>
-            <Navbar />
-            {paintbrush_Data.map((data) => {
-                return (
-                    <Container>
-                        {/* Model name */}
-                        <Model>
-                            <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>{data.model}</p>
-                        </Model>
-                        {/* Main content (image and description) */}
-                        <Content>
-                            {/* Image */}
-                            <Image src={data.imageUrl} />
-                            {/* Product description */}
-                            <div style={styling.right}>
-                                {data?.description?.map((description_data) => {
-                                    return (
-                                        <Description>
-                                            <ul>
-                                                <li>{description_data.value}</li>
-                                            </ul>
-                                        </Description>
-                                    )
-                                })}
-                                <Sizing>
-                                    <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto',  borderCollapse: 'collapse', border: '2px solid blaCK'}}>
-                                        <thead>
-                                            <tr style={{backgroundColor: '#aaddef', height: '25px'}}>
-                                                <th style={{border: '1px solid black'}}>Cat No.</th>
-                                                <th style={{border: '1px solid black'}}>Size</th>
-                                                <th style={{border: '1px solid black'}}>Quantity</th>
-                                            </tr>
-                                        </thead>
-                                        {data?.sizing?.map((size) => {
-                                            return (
-                                                <tbody style={{backgroundColor: size.background_colour}}>
-                                                    <tr>
-                                                        <td style={{border: '1px solid black'}}>{size.catNo}</td>
-                                                        <td style={{border: '1px solid black'}}>{size.size}</td>
-                                                        <td style={{border: '1px solid black'}}>{size.quantity}</td>
-                                                    </tr>
-                                                </tbody>
-                                            )
-                                        })}
-                                    </table>
-                                </Sizing>
-                            </div>
-                        </Content>
-                    </Container>
-                )
-            })}
+            {mobileView ? displayMobile() : displayDesktop()}
         </Fragment>
     )
 }
