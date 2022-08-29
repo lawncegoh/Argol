@@ -26,18 +26,33 @@ align-items: center;
 
 `
 
+const LinksContainer = styled.div`
+width: 65%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin: auto;
+`
 
-const styling = {
-    links: {
-        width: '65%',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        color: 'black',
-        alignItems: 'center',
-        margin: 'auto'
-    }
+const Links = styled.a`
+text-decoration: none;
+margin-right: 1rem;
+color: #787878;
+
+&:hover {
+    color: red;
+    transition: 100ms ease-in;
+    font-weight: bold;
+    border-bottom: 1px solid red;
 }
+&:active {
+    color: red;
+    font-weight: bold;
+    border-bottom: 1px solid red;
+}
+
+`
 
 const Navbar = () => {
     const [state, setState] = useState({
@@ -64,13 +79,13 @@ const Navbar = () => {
     const displayDesktop = () => {
         return (
             <Container>
-                <div style={styling.links}>
+                <LinksContainer>
                     <a href='/'><img src={Logo} style={{ height: '35px', width: '75px' }} alt='Logo' /></a>
-                    <a href='/' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Home</a>
-                    <a href='/aboutus' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>About Us</a>
-                    <a href='/catalogue' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Products</a>
-                    <a href='/contactus' style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}>Contact Us</a>
-                </div>
+                    <Links className='navigationLinks' href='/'>Home</Links>
+                    <Links href='/aboutus'>About Us</Links>
+                    <Links href='/catalogue'>Products</Links>
+                    <Links href='/contactus'>Contact Us</Links>
+                </LinksContainer>
             </Container>
         )
     }

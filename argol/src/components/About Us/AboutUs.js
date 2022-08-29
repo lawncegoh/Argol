@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Navbar from '../Navbar';
 
 const Container = styled.div`
-width: 60%;
+width: 50%;
 margin: 0rem auto 3rem;
 text-align: justify;
 border: 1px solid rgba(0,0,0,0.1);
@@ -11,6 +11,32 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
 -moz-box-shadow:    3px 3px 5px 5px #ccc;
 -webkit-box-shadow: 3px 3px 5px 5px #ccc;
 box-shadow:         3px 3px 5px 5px #ccc;
+`
+
+const Header = styled.div`
+width: 80%;
+margin: 0rem auto 2rem;
+height: 70px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+font-size: 46px;
+letter-spacing: 2px;
+color: red;
+`
+
+const MobileHeader = styled.div`
+width: 80%;
+margin: 0rem auto 1.5rem;
+height: 60px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+font-size: 46px;
+letter-spacing: 2px;
+color: #a6a6a6;
 `
 
 const MobileContainer = styled.div`
@@ -31,8 +57,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin: auto;
-width: 70%;
-margin-bottom: 2.5rem;
+width: 60%;
+margin-bottom: 3.5rem;
+font-size: 16px;
 `
 
 const MobileContent = styled.div`
@@ -46,7 +73,7 @@ margin-bottom: 2.5rem;
 
 const Heading = styled.p`
 text-align: center;
-font-size: 16px;
+font-size: 20px;
 font-weight: bold;
 margin-bottom: 1.5rem;
 `
@@ -78,6 +105,9 @@ const AboutUs = () => {
         return (
             <Fragment>
                 <Navbar />
+                <Header>
+                    <p>About Us</p>
+                </Header>
                 <Container>
                     <Content style={{ marginTop: '3rem' }}>
                         <Heading>Who we are</Heading>
@@ -112,6 +142,9 @@ const AboutUs = () => {
         return (
             <Fragment>
                 <Navbar />
+                <MobileHeader>
+                    <p>About Us</p>
+                </MobileHeader>
                 <MobileContainer>
                     <MobileContent style={{ marginTop: '3rem' }}>
                         <Heading>Who we are</Heading>

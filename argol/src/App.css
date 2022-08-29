@@ -2,21 +2,18 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: helvetica;
+  font-family: centuryGothic;
+ 
 }
 
 body {
-  background-color: white;
+  background-color: #fffef0;
   color: black;
-  /* font-family: 'LaCebadita'; */
+  font-family: 'centuryGothic';
 }
 
-/* @font-face {
-  font-family: 'LaCebadita';
-  src: url('../src/assets/font/La Cebadita.otf');
-}
 
 @font-face {
-  font-family: 'helvetica';
-  src: local('helvetica-neue-font'), url('../src/assets/font/helvetica-neue-font/HelveticaNeueLT57Condensed.woff') format('opentype');
-} */
+  font-family: 'centuryGothic';
+  src: local('Century Gothic'), url('./assets/font/Century\ Gothic.ttf') format('opentype');
+}
