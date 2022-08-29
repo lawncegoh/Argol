@@ -5,7 +5,7 @@ import Navbar from '../Navbar';
 const paintbrush_Data = [
     {
         model: "DeLuxe Flat",
-        imageUrl: require('../../assets/products/DeLuxeFlat.jpg'),
+        imageUrl: require('../../assets/products/DeLuxeFlat.png'),
         description: [
             {
                 value: "Suitable for all paints"
