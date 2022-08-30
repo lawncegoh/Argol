@@ -61,7 +61,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Flat Paint Brush",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/ClassicFlat.png'),
         description: [
             {
                 value: "Suitable for all paints."
@@ -102,7 +102,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Varnish Brush",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DeLuxeVarnish.png'),
         description: [
             {
                 value: "Suitable for Varnish, Lacquer and Stain"
@@ -167,7 +167,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Pointed Brush",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DeLuxePointed.png'),
         description: [
             {
                 value: "Suitable for Varnish, Lacquer and Stain"
@@ -208,7 +208,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/UltraRefill6.png'),
         description: [
             {
                 value: "Suitable for all paints"
@@ -240,7 +240,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/UltraRefill8.png'),
         description: [
             {
                 value: "Suitable for all paints"
@@ -272,7 +272,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Mogloss4.png'),
         description: [
             {
                 value: "Suitable for Industrial & Epoxy/PU paints"
@@ -298,7 +298,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Mogloss2.png'),
         description: [
             {
                 value: "Suitable for Industrial & Epoxy/PU paints"
@@ -324,7 +324,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Mogloss6.png'),
         description: [
             {
                 value: "Suitable for Industrial & Epoxy/PU paints"
@@ -350,7 +350,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Mogloss7.png'),
         description: [
             {
                 value: "Suitable for Industrial & Epoxy/PU paints"
@@ -376,7 +376,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DoubleYellowStripe4.png'),
         description: [
             {
                 value: "Distinguishable double Yellow-stripe by Argol"
@@ -396,7 +396,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DoubleYellowStripe2.png'),
         description: [
             {
                 value: "Distinguishable double Yellow-stripe by Argol"
@@ -416,7 +416,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/FullYellowStripe6.png'),
         description: [
             {
                 value: "Distinguishable Full Yellow-stripe by Argol"
@@ -436,7 +436,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DoubleYellowStripe7.png'),
         description: [
             {
                 value: "Distinguishable double Yellow-stripe by Argol"
@@ -456,7 +456,7 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refills",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Flocked.png'),
         sizing: [
             {
                 catNo: "10 770 00",
@@ -474,7 +474,7 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Painting Tool",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/DeLuxePaintingTool.png'),
         description: [
             {
                 value: "For use on Wall/Wallpaper as Stripper"
@@ -500,7 +500,7 @@ const paintbrush_Data = [
     },
     {
         model: "Lafustreif",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Lafustreif.png'),
         description: [
             {
                 value: "Suitable for all paints."
@@ -535,7 +535,7 @@ const paintbrush_Data = [
     },
     {
         model: "Elitakolor Range",
-        imageUrl: require('../../assets/paintbrush1.png'),
+        imageUrl: require('../../assets/products/Elitakolo4.5.png'),
         description: [
             {
                 value: "Suitable for all paints"
@@ -681,7 +681,7 @@ font-size: 18px;
 
 
 const Image = styled.img`
-width: 55%;
+width: 45%;
 height: 70%;
 background-image: red;
 `

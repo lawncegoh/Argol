@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-width: 65%;
+width: 30%;
 `
 
 const LandingPage = () => {
