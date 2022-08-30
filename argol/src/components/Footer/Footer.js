@@ -12,6 +12,12 @@ height: 200px;
 background-color: #ffefd4;
 `
 
+const MobileContainer = styled.div`
+width: 100%;
+height: 150px;
+background-color: #ffefd4;
+`
+
 const Phrase = styled.div`
 display: flex;
 flex-direction: column;
@@ -60,15 +66,15 @@ const Footer = () => {
 
   const displayMobile = () => {
     return (
-      <Container>
+      <MobileContainer>
         <Phrase>
-          <p style={{ letterSpacing: '1.4px', fontSize: '18px', borderTop: '1px solid #a6a6a6', paddingTop: '2.5rem', width: '85%', margin: 'auto' }}><FontAwesomeIcon icon={faBrush} /> Before You Start, Think Of The Finish</p>
-          <div style={{ fontSize: '14px' }}>
+          <p style={{ letterSpacing: '1.4px', fontSize: '16px', borderTop: '1px solid #a6a6a6', marginTop: '1rem', paddingTop: '1rem', width: '85%', margin: 'auto' }}><FontAwesomeIcon icon={faBrush} /> Before You Start, Think Of The Finish</p>
+          <div style={{ fontSize: '12px' }}>
             <p>Argol & Company Pte Ltd</p>
             <p>@ 2022 All Rights Reserved.</p>
           </div>
         </Phrase>
-      </Container>
+      </MobileContainer>
     )
   }
 

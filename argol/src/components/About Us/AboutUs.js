@@ -22,7 +22,6 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 font-size: 46px;
-letter-spacing: 2px;
 color: red;
 `
 
@@ -35,8 +34,8 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 font-size: 46px;
-letter-spacing: 2px;
 color: #a6a6a6;
+color: red;
 `
 
 const MobileContainer = styled.div`
@@ -69,11 +68,12 @@ justify-content: center;
 margin: auto;
 width: 80%;
 margin-bottom: 2.5rem;
+font-size: 15px;
 `
 
 const Heading = styled.p`
 text-align: center;
-font-size: 20px;
+font-size: 17px;
 font-weight: bold;
 margin-bottom: 1.5rem;
 `
