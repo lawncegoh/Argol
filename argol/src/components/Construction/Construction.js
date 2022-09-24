@@ -13,6 +13,15 @@ align-items: center;
 padding-bottom: 5rem;
 `
 
+const MobileContainer = styled.div`
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
 const Content = styled.p`
 font-size: 32px;
 font-weight: bold;
@@ -60,10 +69,10 @@ const Construction = () => {
 
     const displayMobile = () => {
         return (
-            <Container>
+            <MobileContainer>
                 <img style={{ width: '32%', height: '18%' }} src={Logo1} alt='Argol' />
                 <MobileContent>Under Construction</MobileContent>
-            </Container>
+            </MobileContainer>
         )
     }
 
