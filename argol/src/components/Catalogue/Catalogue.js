@@ -1,11 +1,13 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
-import Logo from '../../assets/logo1.png'
 
 const paintbrush_Data = [
     {
         model: "DeLuxe Flat Paint Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DeLuxeFlat.png'),
         description: [
             {
@@ -62,6 +64,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Flat Paint Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/ClassicFlat.png'),
         description: [
             {
@@ -103,6 +108,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Varnish Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DeLuxeVarnish.png'),
         description: [
             {
@@ -168,6 +176,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Pointed Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DeLuxePointed.png'),
         description: [
             {
@@ -209,6 +220,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/UltraRefill6.png'),
         description: [
             {
@@ -241,6 +255,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/UltraRefill8.png'),
         description: [
             {
@@ -273,6 +290,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Mogloss4.png'),
         description: [
             {
@@ -299,6 +319,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Mogloss2.png'),
         description: [
             {
@@ -325,6 +348,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Mogloss6.png'),
         description: [
             {
@@ -351,6 +377,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Mogloss7.png'),
         description: [
             {
@@ -377,6 +406,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Gold6.png'),
         description: [
             {
@@ -415,6 +447,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Gold8.png'),
         description: [
             {
@@ -453,6 +488,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DoubleYellowStripe4.png'),
         description: [
             {
@@ -473,6 +511,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DoubleYellowStripe2.png'),
         description: [
             {
@@ -493,6 +534,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/FullYellowStripe6.png'),
         description: [
             {
@@ -513,6 +557,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DoubleYellowStripe7.png'),
         description: [
             {
@@ -533,6 +580,9 @@ const paintbrush_Data = [
     },
     {
         model: "Classic Range Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/Flocked.png'),
         sizing: [
             {
@@ -551,6 +601,9 @@ const paintbrush_Data = [
     },
     {
         model: "DeLuxe Painting Tool",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DeLuxePaintingTool.png'),
         description: [
             {
@@ -577,6 +630,9 @@ const paintbrush_Data = [
     },
     {
         model: "Lafustreif",
+        LogoUrl: require('../../assets/FurstLogo.png'),
+        height: '100px',
+        width: '130px',
         imageUrl: require('../../assets/products/Lafustreif.png'),
         description: [
             {
@@ -612,6 +668,9 @@ const paintbrush_Data = [
     },
     {
         model: "Elitakolor Range",
+        LogoUrl: require('../../assets/FurstLogo.png'),
+        height: '100px',
+        width: '130px',
         imageUrl: require('../../assets/products/Elitakolor4.5.png'),
         description: [
             {
@@ -653,6 +712,9 @@ const paintbrush_Data = [
     },
     {
         model: "Elitakolor Range",
+        LogoUrl: require('../../assets/FurstLogo.png'),
+        height: '100px',
+        width: '130px',
         imageUrl: require('../../assets/products/Elitakolor6.png'),
         description: [
             {
@@ -682,6 +744,9 @@ const paintbrush_Data = [
     },
     {
         model: "Elitakolor Range",
+        LogoUrl: require('../../assets/FurstLogo.png'),
+        height: '100px',
+        width: '130px',
         imageUrl: require('../../assets/products/Elitakolor7.png'),
         description: [
             {
@@ -714,6 +779,9 @@ const paintbrush_Data = [
     },
     {
         model: "Contractor grade Spiker/Self-Leveling Roller",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/SpikeRoller.png'),
         description: [
             {
@@ -752,6 +820,9 @@ const paintbrush_Data = [
     },
     {
         model: "Contractor grade Spiker/Self-Leveling Roller",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
         imageUrl: require('../../assets/products/DoubleArmFrame.png'),
         description: [
             {
@@ -1038,8 +1109,8 @@ const Catalogue = () => {
                     return (
                         <Container>
                             {/* Model name */}
+                            <img src={data.LogoUrl} style={{ height: data.height , width: data.width , alignItems: 'center', margin: 'auto'}} alt='Logo' />
                             <Model>
-                                <img src={Logo} style={{ height: '75px', width: '100px', marginRight: '0.5rem' }} alt='Logo' />
                                 <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </Model>
                             {/* Main content (image and description) */}
@@ -1130,8 +1201,8 @@ const Catalogue = () => {
                     return (
                         <MobileContainer>
                             {/* Model name */}
+                            <img src={data.LogoUrl} style={{height: '70px', width: '90px', margin: 'auto'}} alt='Logo' />
                             <MobileModel>
-                                <img src={Logo} style={{height: '100%', width: '80px' }} alt='Logo' />
                                 <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </MobileModel>
                             {/* Main content (image and description) */}

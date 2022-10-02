@@ -21,7 +21,7 @@ position: relative;
 const Content = styled.div`
 position: absolute;
 top: 12%;
-right: 30%;
+right: 35%;
 color: black;
 background-color: #ffefd4;
 font-size: 14px;
@@ -32,7 +32,7 @@ text-align: center;
 const MobileContent = styled.div`
 position: absolute;
 top: 5%;
-right: 0%;
+right: 5%;
 color: black;
 background-color: #ffefd4;
 font-size: 14px;
@@ -105,10 +105,12 @@ const ContactUs = () => {
                 <Container>
                     <Image src={ContactUsPic} />
                     <Content>
-                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '1rem' }}>Argol & Company Pte Ltd</p>
-                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial street 1, #05-14 North Spring Bizhub, Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg / sales_argol@singnet.com.sg</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '0.6rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
+                        <p><b>WeChat :</b> (65) 9683 9120</p>
                     </Content>
                 </Container>
             </Fragment>
@@ -125,10 +127,12 @@ const ContactUs = () => {
                 <MobileContainer>
                     <MobileImage src={ContactUsPic} />  
                     <MobileContent>
-                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '1rem' }}>Argol & Company Pte Ltd</p>
-                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial street 1, #05-14 North Spring Bizhub, Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg / sales_argol@singnet.com.sg</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '0.3rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
+                        <p><b>WeChat :</b> (65) 9683 9120</p>
                     </MobileContent>
                 </MobileContainer>
             </Fragment>
