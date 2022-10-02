@@ -5,7 +5,7 @@ import Logo from '../../assets/logo1.png'
 
 const paintbrush_Data = [
     {
-        model: "DeLuxe Flat",
+        model: "DeLuxe Flat Paint Brush",
         imageUrl: require('../../assets/products/DeLuxeFlat.png'),
         description: [
             {
@@ -272,7 +272,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Mogloss4.png'),
         description: [
             {
@@ -298,7 +298,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Mogloss2.png'),
         description: [
             {
@@ -324,7 +324,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Mogloss6.png'),
         description: [
             {
@@ -350,7 +350,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Mogloss7.png'),
         description: [
             {
@@ -376,7 +376,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Gold6.png'),
         description: [
             {
@@ -414,7 +414,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "DeLuxe Range Refills",
+        model: "DeLuxe Range Refill",
         imageUrl: require('../../assets/products/Gold8.png'),
         description: [
             {
@@ -452,7 +452,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "Classic Range Refills",
+        model: "Classic Range Refill",
         imageUrl: require('../../assets/products/DoubleYellowStripe4.png'),
         description: [
             {
@@ -472,7 +472,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "Classic Range Refills",
+        model: "Classic Range Refill",
         imageUrl: require('../../assets/products/DoubleYellowStripe2.png'),
         description: [
             {
@@ -492,7 +492,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "Classic Range Refills",
+        model: "Classic Range Refill",
         imageUrl: require('../../assets/products/FullYellowStripe6.png'),
         description: [
             {
@@ -512,7 +512,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "Classic Range Refills",
+        model: "Classic Range Refill",
         imageUrl: require('../../assets/products/DoubleYellowStripe7.png'),
         description: [
             {
@@ -532,7 +532,7 @@ const paintbrush_Data = [
         ]
     },
     {
-        model: "Classic Range Refills",
+        model: "Classic Range Refill",
         imageUrl: require('../../assets/products/Flocked.png'),
         sizing: [
             {

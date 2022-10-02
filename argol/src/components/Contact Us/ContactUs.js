@@ -107,7 +107,7 @@ const ContactUs = () => {
                     <Content>
                         <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '1rem' }}>Argol & Company Pte Ltd</p>
                         <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial street 1, #05-14 North Spring Bizhub, Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg / sales_argol@singnet.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
                     </Content>
                 </Container>
@@ -127,7 +127,7 @@ const ContactUs = () => {
                     <MobileContent>
                         <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '1rem' }}>Argol & Company Pte Ltd</p>
                         <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial street 1, #05-14 North Spring Bizhub, Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> sales_argol@singnet.com.sg / lgoh_argol@singnet.com.sg</p>
+                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg / sales_argol@singnet.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
                     </MobileContent>
                 </MobileContainer>
