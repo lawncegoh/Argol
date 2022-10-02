@@ -111,7 +111,6 @@ const ContactUs = () => {
                         <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
                         <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
-                        <p><b>WeChat :</b> (65) 9683 9120</p>
                     </Content>
                 </Container>
             </Fragment>
@@ -133,7 +132,6 @@ const ContactUs = () => {
                         <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
                         <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
                         <p><b>Whatsapp :</b> (65) 9683 9120</p>
-                        <p><b>WeChat :</b> (65) 9683 9120</p>
                     </MobileContent>
                 </MobileContainer>
             </Fragment>
