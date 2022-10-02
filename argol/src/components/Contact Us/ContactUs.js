@@ -9,7 +9,7 @@ width: 90%;
 height: 100%;
 margin: auto;
 position: relative;
-
+font-weight: bold;
 `
 
 const MobileContainer = styled.div`
@@ -21,11 +21,11 @@ position: relative;
 const Content = styled.div`
 position: absolute;
 top: 12%;
-right: 35%;
+right: 30%;
 color: black;
-background-color: #ffefd4;
-font-size: 14px;
-padding: 25px 20px 25px 20px;
+background-color: white;
+font-size: 16px;
+padding: 50px 70px 50px 70px;
 text-align: center;
 `
 
@@ -34,10 +34,11 @@ position: absolute;
 top: 5%;
 right: 5%;
 color: black;
-background-color: #ffefd4;
+background-color: white;
 font-size: 14px;
-padding: 15px 10px 15px 10px;
+padding: 20px 20px 20px 20px;
 text-align: center;
+font-weight: bold;
 `
 
 const Image = styled.img`
@@ -105,7 +106,7 @@ const ContactUs = () => {
                 <Container>
                     <Image src={ContactUsPic} />
                     <Content>
-                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '0.6rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '24px', marginBottom: '0.6rem' }}>Argol & Company Pte Ltd</p>
                         <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
                         <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
                         <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
@@ -127,7 +128,7 @@ const ContactUs = () => {
                 <MobileContainer>
                     <MobileImage src={ContactUsPic} />  
                     <MobileContent>
-                        <p style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '0.3rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '0.3rem' }}>Argol & Company Pte Ltd</p>
                         <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
                         <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
                         <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
