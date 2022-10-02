@@ -7,7 +7,7 @@ import {
     faAngleLeft
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Logo from '../assets/argol.png'
+import Logo from '../assets/logo1.png'
 
 const Container = styled.div`
 width: 80%;
@@ -15,7 +15,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: auto;
-padding: 2.5rem 0rem 2.5rem;
+padding: 1.5rem 0rem 2.5rem;
 `
 
 const MobileContainer = styled.div`
@@ -24,7 +24,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: 0rem auto 1rem;
-padding-top: 1.4rem;
+padding-top: 0.8rem;
 align-items: center;
 position: relative;
 `
@@ -54,7 +54,7 @@ color: #787878;
 
 &:hover {
     color: red;
-    transition: 100ms ease-in;
+    transition: 10ms ease-in;
     font-weight: bold;
     border-bottom: 1px solid red;
 }
@@ -96,10 +96,11 @@ const Navbar = () => {
         return (
             <Container>
                 <LinksContainer>
-                    <a href='/'><img src={Logo} style={{ height: '35px', width: '75px' }} alt='Logo' /></a>
+                    <a href='/'><img src={Logo} style={{ height: '75px', width: '100px' }} alt='Logo' /></a>
                     <Links className='navigationLinks' href='/'>Home</Links>
                     <Links href='/aboutus'>About Us</Links>
                     <Links href='/catalogue'>Products</Links>
+                    <Links href='/new-products'>New Products</Links>
                     <Links href='/contactus'>Contact Us</Links>
                 </LinksContainer>
             </Container>
@@ -132,7 +133,7 @@ const Navbar = () => {
 
         return (
             <MobileContainer>
-                <a href='/'><img src={Logo} style={{ height: '35px', width: '75px', marginRight: '2rem' }} alt='Logo' /></a>
+                <a href='/'><img src={Logo} style={{ height: '60px', width: '80px', marginRight: '2rem' }} alt='Logo' /></a>
                 {!open && <FontAwesomeIcon icon={faBars} onClick={openNavbar} />}
                 {open && <FontAwesomeIcon icon={faTimes} onClick={closeNavbar} />}
                 {open &&
@@ -145,6 +146,7 @@ const Navbar = () => {
                                 <MobileLinks className='navigationLinks' href='/'>Home</MobileLinks>
                                 <MobileLinks href='/aboutus'>About Us</MobileLinks>
                                 <MobileLinks href='/catalogue'>Products</MobileLinks>
+                                <MobileLinks href='/new-products'>New Products</MobileLinks>
                                 <MobileLinks href='/contactus'>Contact Us</MobileLinks>
                             </div>
                         </MobileNavbar>,

@@ -67,15 +67,8 @@ flex-direction: column;
 justify-content: center;
 margin: auto;
 width: 80%;
-margin-bottom: 2.5rem;
+margin-bottom: 2rem;
 font-size: 15px;
-`
-
-const Heading = styled.p`
-text-align: center;
-font-size: 17px;
-font-weight: bold;
-margin-bottom: 1.5rem;
 `
 
 const AboutUs = () => {
@@ -109,29 +102,51 @@ const AboutUs = () => {
                     <p>About Us</p>
                 </Header>
                 <Container>
-                    <Content style={{ marginTop: '3rem' }}>
-                        <Heading>Who we are</Heading>
-                        <p>Established in 2003, Argol is probably the market's favourite decorating brand. Innovation is the company's passion and this can be seen in
-                            brushes, rollers and tools. Hence, Argol's competitive advantages lie solely in innovation and product differentiations.</p>
+                    <Content>
+                        <p style={{ fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '1.5rem', marginTop: '3rem' }}>proudly singaporean since 2004</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>1986 - 1999</p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            A veteran in the paint brushes and paint rollers industry since 1986! Lawrence T P Goh, the name known to many Hardware and Paint resellers
+                            in East & West Malaysia, Brunei, Indonesia and Hongkong. Having worked for England and Europe's well-known brand Harris, for 9 years. Through
+                            Harris Lawrence has also worked alongside with another well-known German brand; Fia.
+                        </p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            In 1994, when Stanley Tools, USA, acquired American Brush Company (ABC),
+                            Germany's Friess and England's Mosley Stone, Lawrence was poached. And
+                            worked for Stanley Tools, Singapore.
+                        </p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            Core responsibility. Solely to develop and strategise Stanley's Growth Strategy;
+                            market & product developments and market penetration for incremental
+                            revenues and market's shares.
+                        </p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            Through these opportunities, Lawrence gained and progressed well with
+                            products' manufacturing, technicality and materials - Paint brushes and
+                            paint rollers!
+                        </p>
                     </Content>
                     <Content>
-                        <Heading>Our Experiences and Product Knowledge</Heading>
-                        <p>The founder of this company had worked in/worked with well-known brands like Harris, Mosley Stone, Friess, FIA, America Brush Company,
-                            Stanley, Cristin and others since 1986.</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>2000</p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            In this millennium, Lawrence joined Germany's Cristin. To set up their subsidiary
+                            office in Singapore. As a Shareholder and Director.
+                        </p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            In 2004, Argol & Company Pte Ltd was set-up. To capitalise on market's growth
+                            and potentials.  And also opportunities for product developments.
+                        </p>
+                        <p style={{ marginBottom: '0.8rem' }}>
+                            And today, Argol brand may not be a market brand leader. But definitely and
+                            truly, a brand that emphasises Product Differentiation as its Competitive Advantages.
+                            Every material used has its specific role. Hence, Argol's products do dominant over
+                            competitors. We usually lead but hardly follow.
+                        </p>
+                        <p>As Argol's tagline: *Performance Focussed* / * Before you start, think of the finish*</p>
                     </Content>
                     <Content>
-                        <Heading>Our Vision</Heading>
-                        <p>Singapore's known decorating brand for its fine finishing and performance since 2003. Since then, we have been helping professional painters
-                            to save costs and users to accept better; their painting finishing. We provide a range of paint rollers, paint brushes and painting tools.</p>
-                    </Content>
-                    <Content>
-                        <Heading>Our Aim</Heading>
-                        <p>To help Painting Contractors make painting/repairing and decorating easier. Saving time and costs; less time and less paint coat. More acceptance
-                            and no rejection.</p>
-                    </Content>
-                    <Content>
-                        <Heading>Our Philosophy</Heading>
-                        <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>We do not believe in "The Best" but only "The Better"</p>
+                        <p style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '1rem' }}>Philosophy</p>
+                        <p style={{ textAlign: 'center', color: 'red', fontWeight: 'bold', fontSize: '18px' }}>We do not believe in "The Best" but only "The Better"</p>
                     </Content>
                 </Container>
             </Fragment>
@@ -146,29 +161,51 @@ const AboutUs = () => {
                     <p>About Us</p>
                 </MobileHeader>
                 <MobileContainer>
-                    <MobileContent style={{ marginTop: '3rem' }}>
-                        <Heading>Who we are</Heading>
-                        <p>Established in 2003, Argol is probably the market's favourite decorating brand. Innovation is the company's passion and this can be seen in
-                            brushes, rollers and tools. Hence, Argol's competitive advantages lie solely in innovation and product differentiations.</p>
+                    <MobileContent>
+                        <p style={{ fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '1.5rem', marginTop: '3rem' }}>proudly singaporean since 2004</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '1rem' }}>1986 - 1999</p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            A veteran in the paint brushes and paint rollers industry since 1986! Lawrence T P Goh, the name known to many Hardware and Paint resellers
+                            in East & West Malaysia, Brunei, Indonesia and Hongkong. Having worked for England and Europe's well-known brand Harris, for 9 years. Through
+                            Harris Lawrence has also worked alongside with another well-known German brand; Fia.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            In 1994, when Stanley Tools, USA, acquired American Brush Company (ABC),
+                            Germany's Friess and England's Mosley Stone, Lawrence was poached. And
+                            worked for Stanley Tools, Singapore.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            Core responsibility. Solely to develop and strategise Stanley's Growth Strategy;
+                            market & product developments and market penetration for incremental
+                            revenues and market's shares.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            Through these opportunities, Lawrence gained and progressed well with
+                            products' manufacturing, technicality and materials - Paint brushes and
+                            paint rollers!
+                        </p>
                     </MobileContent>
                     <MobileContent>
-                        <Heading>Our Experiences and Product Knowledge</Heading>
-                        <p>The founder of this company had worked in/worked with well-known brands like Harris, Mosley Stone, Friess, FIA, America Brush Company,
-                            Stanley, Cristin and others since 1986.</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>2000</p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            In this millennium, Lawrence joined Germany's Cristin. To set up their subsidiary
+                            office in Singapore. As a Shareholder and Director.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            In 2004, Argol & Company Pte Ltd was set-up. To capitalise on market's growth
+                            and potentials.  And also opportunities for product developments.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem' }}>
+                            And today, Argol brand may not be a market brand leader. But definitely and
+                            truly, a brand that emphasises Product Differentiation as its Competitive Advantages.
+                            Every material used has its specific role. Hence, Argol's products do dominant over
+                            competitors. We usually lead but hardly follow.
+                        </p>
+                        <p>As Argol's tagline: *Performance Focussed* / * Before you start, think of the finish*</p>
                     </MobileContent>
                     <MobileContent>
-                        <Heading>Our Vision</Heading>
-                        <p>Singapore's known decorating brand for its fine finishing and performance since 2003. Since then, we have been helping professional painters
-                            to save costs and users to accept better; their painting finishing. We provide a range of paint rollers, paint brushes and painting tools.</p>
-                    </MobileContent>
-                    <MobileContent>
-                        <Heading>Our Aim</Heading>
-                        <p>To help Painting Contractors make painting/repairing and decorating easier. Saving time and costs; less time and less paint coat. More acceptance
-                            and no rejection.</p>
-                    </MobileContent>
-                    <MobileContent>
-                        <Heading>Our Philosophy</Heading>
-                        <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>We do not believe in "The Best" but only "The Better"</p>
+                        <p style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '1rem' }}>Philosophy</p>
+                        <p style={{ textAlign: 'center', color: 'red', fontWeight: 'bold', fontSize: '15px' }}>We do not believe in "The Best" but only "The Better"</p>
                     </MobileContent>
                 </MobileContainer>
             </Fragment>

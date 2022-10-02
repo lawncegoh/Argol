@@ -1,25 +1,26 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import styled from 'styled-components'
-
+import Navbar from '../Navbar'
 import Logo1 from '../../assets/logo1.png'
 
 const Container = styled.div`
 width: 100%;
-height: 100vh;
+height: 70vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding-bottom: 5rem;
+padding-bottom: 6rem;
 `
 
 const MobileContainer = styled.div`
 width: 100%;
-height: 100vh;
+height: 80vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+padding-bottom: 8rem;
 `
 
 const Content = styled.p`
@@ -34,8 +35,20 @@ font-weight: bold;
 text-align: center;
 `
 
-const Construction = () => {
+const Header = styled.div`
+width: 80%;
+margin: 0rem auto 1rem;
+height: 70px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+font-size: 46px;
+letter-spacing: 2px;
+color: red;
+`
 
+const NewProducts = () => {
 
     const [state, setState] = useState({
         mobileView: false,
@@ -60,19 +73,26 @@ const Construction = () => {
 
     const displayDesktop = () => {
         return (
-            <Container>
-                <img style={{ width: '10%', height: '18%' }} src={Logo1} alt='Argol' />
-                <Content>Under Construction</Content>
-            </Container>
+            <Fragment>
+                <Navbar />
+                <Header>New Products</Header>
+                <Container>
+                    <img src={Logo1} style={{ height: '75px', width: '100px', marginRight: '0.5rem' }} alt='Logo' />
+                    <Content>Under Construction</Content>
+                </Container>
+            </Fragment>
         )
     }
 
     const displayMobile = () => {
         return (
-            <MobileContainer>
-                <img style={{ width: '32%', height: '18%' }} src={Logo1} alt='Argol' />
-                <MobileContent>Under Construction</MobileContent>
-            </MobileContainer>
+            <Fragment>
+                <Navbar />
+                <MobileContainer>
+                    <img style={{ width: '35%', height: '20%' }} src={Logo1} alt='Argol' />
+                    <MobileContent>Under Construction</MobileContent>
+                </MobileContainer>
+            </Fragment>
         )
     }
 
@@ -83,4 +103,4 @@ const Construction = () => {
     )
 }
 
-export default Construction
+export default NewProducts

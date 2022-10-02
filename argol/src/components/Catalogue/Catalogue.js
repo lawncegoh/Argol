@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
+import Logo from '../../assets/logo1.png'
 
 const paintbrush_Data = [
     {
@@ -844,7 +845,7 @@ flex-direction: column;
 `
 
 const Model = styled.div`
-width: 35%;
+width: 40%;
 margin: auto;
 display: flex;
 justify-content: center;
@@ -1038,6 +1039,7 @@ const Catalogue = () => {
                         <Container>
                             {/* Model name */}
                             <Model>
+                                <img src={Logo} style={{ height: '75px', width: '100px', marginRight: '0.5rem' }} alt='Logo' />
                                 <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </Model>
                             {/* Main content (image and description) */}
@@ -1051,7 +1053,7 @@ const Catalogue = () => {
                                             return (
                                                 <Description>
                                                     <ul>
-                                                        <li style={{ height: '45px'}}>{description_data.value}</li>
+                                                        <li style={{ height: '45px' }}>{description_data.value}</li>
                                                     </ul>
                                                 </Description>
                                             )
@@ -1092,7 +1094,7 @@ const Catalogue = () => {
                         return (
                             <Fragment>
                                 <div style={styling.AllMasterRollers}>
-                                    <img style={{ width: '80%', margin: 'auto', marginBottom: '3rem' }} src={item.imageUrl} />
+                                    <img style={{ width: '80%', margin: 'auto', marginBottom: '3rem' }} src={item.imageUrl} alt='All Master Rollers' />
                                     <table style={{ borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK', width: '60%', margin: 'auto' }}>
                                         <tr>
                                             <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Cat. No.</th>
@@ -1129,7 +1131,8 @@ const Catalogue = () => {
                         <MobileContainer>
                             {/* Model name */}
                             <MobileModel>
-                                <p style={{ fontSize: '24px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                <img src={Logo} style={{height: '100%', width: '80px' }} alt='Logo' />
+                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </MobileModel>
                             {/* Main content (image and description) */}
                             <MobileContent>
@@ -1175,7 +1178,7 @@ const Catalogue = () => {
                         </MobileContainer>
                     )
                 })}
-                <MobileModel style={{width: '90%', margin: '0rem auto 1.5rem'}}>
+                <MobileModel style={{ width: '90%', margin: '0rem auto 1.5rem' }}>
                     <p style={{ fontSize: '24px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>AllMaster Paint Roller Frames</p>
                 </MobileModel>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr', width: '90%', margin: '0rem auto' }}>
@@ -1183,7 +1186,7 @@ const Catalogue = () => {
                         return (
                             <Fragment>
                                 <div style={styling.MobileAllMasterRollers}>
-                                    <img style={{ width: '90%', margin: 'auto', marginBottom: '2rem' }} src={item.imageUrl} />
+                                    <img style={{ width: '90%', margin: 'auto', marginBottom: '2rem' }} src={item.imageUrl} alt='All Master Rollers'/>
                                     <table style={{ marginBottom: '4rem', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK', width: '100%', margin: 'auto' }}>
                                         <tr>
                                             <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Cat. No.</th>
