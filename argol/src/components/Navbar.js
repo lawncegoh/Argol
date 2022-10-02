@@ -142,7 +142,7 @@ const Navbar = () => {
                             <div>
                                 <p style={{ marginLeft: '1rem', marginTop: '1rem' }} onClick={closeNavbar}><FontAwesomeIcon style={{ marginRight: '0.4rem' }} icon={faAngleLeft} onClick={closeNavbar} />Back</p>
                             </div>
-                            <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'space-between', height: '25%', marginTop: '2rem', width: 'auto'}}>
+                            <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'space-between', height: '35%', marginTop: '2rem', width: 'auto'}}>
                                 <MobileLinks className='navigationLinks' href='/'>Home</MobileLinks>
                                 <MobileLinks href='/aboutus'>About Us</MobileLinks>
                                 <MobileLinks href='/catalogue'>Products</MobileLinks>
