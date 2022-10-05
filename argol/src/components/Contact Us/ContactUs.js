@@ -20,7 +20,7 @@ position: relative;
 
 const Content = styled.div`
 position: absolute;
-top: 12%;
+top: 0%;
 right: 30%;
 color: black;
 background-color: white;
@@ -107,6 +107,7 @@ const ContactUs = () => {
                     <Image src={ContactUsPic} />
                     <Content>
                         <p style={{ fontWeight: 'bold', fontSize: '24px', marginBottom: '0.6rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{textAlign: 'center', marginBottom: '2rem'}}>5 Yishun Industrial Street 1<br/>#05-14 North Spring Bizhub<br/>Singapore 768161</p>
                         <p style={{ fontSize: '17px', marginBottom: '0.6rem' }}>We welcome all enquires</p>
                         <p style={{ marginBottom: '0.2rem' }}>* Wholesaling / Distributing</p>
                         <p style={{ marginBottom: '0.2rem' }}>* Volume / Quantity Purchases</p>
@@ -136,7 +137,8 @@ const ContactUs = () => {
                 <MobileContainer>
                     <MobileImage src={ContactUsPic} />
                     <MobileContent>
-                        <p style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '0.3rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '0.5rem' }}>Argol & Company Pte Ltd</p>
+                        <p style={{textAlign: 'center', marginBottom: '1.2rem'}}>5 Yishun Industrial Street 1<br/>#05-14 North Spring Bizhub<br/>Singapore 768161</p>
                         <p style={{ fontSize: '16px', marginBottom: '0.3rem', marginTop: '0.6rem'}}>We welcome all enquires</p>
                         <p style={{ marginBottom: '0.2rem' }}>* Wholesaling / Distributing</p>
                         <p style={{ marginBottom: '0.2rem' }}>* Volume / Quantity Purchases</p>
