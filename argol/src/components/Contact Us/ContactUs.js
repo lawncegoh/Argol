@@ -24,9 +24,9 @@ top: 12%;
 right: 30%;
 color: black;
 background-color: white;
-font-size: 16px;
+font-size: 15px;
 padding: 50px 70px 50px 70px;
-text-align: center;
+text-align: left;
 `
 
 const MobileContent = styled.div`
@@ -37,7 +37,7 @@ color: black;
 background-color: white;
 font-size: 14px;
 padding: 20px 20px 20px 20px;
-text-align: center;
+text-align: left;
 font-weight: bold;
 `
 
@@ -107,11 +107,20 @@ const ContactUs = () => {
                     <Image src={ContactUsPic} />
                     <Content>
                         <p style={{ fontWeight: 'bold', fontSize: '24px', marginBottom: '0.6rem' }}>Argol & Company Pte Ltd</p>
-                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
-                        <p><b>Whatsapp :</b> (65) 9683 9120</p>
-                    </Content>
+                        <p style={{ fontSize: '17px', marginBottom: '0.6rem' }}>We welcome all enquires</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Wholesaling / Distributing</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Volume / Quantity Purchases</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Private / Generic Branding</p>
+                        <p style={{ marginTop: '1.2rem', marginBottom: '0.6rem', fontSize: '17px' }}>Kindly email / Whatsapp</p>
+                        <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '0.6rem' }}>
+                            <p style={{ marginRight: '0.4rem' }}>Email :</p>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <p style={{ marginBottom: '0.4rem' }}>lgoh_argol@singnet.com.sg</p>
+                                <p>sales_argol@singnet.com.sg</p>
+                            </div>
+                        </div>
+                        <p style={{ marginBottom: '0.6rem' }}><b>Whatsapp :</b> (65) 9683 9120</p>
+                        <p ><b>Website: </b>https://www.argol.com.sg</p>                    </Content>
                 </Container>
             </Fragment>
         )
@@ -125,13 +134,23 @@ const ContactUs = () => {
                     <p>Contact Us</p>
                 </Header>
                 <MobileContainer>
-                    <MobileImage src={ContactUsPic} />  
+                    <MobileImage src={ContactUsPic} />
                     <MobileContent>
                         <p style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '0.3rem' }}>Argol & Company Pte Ltd</p>
-                        <p style={{ marginBottom: '1rem' }}>5 Yishun Industrial Street 1,<br/>#05-14 North Spring Bizhub,<br/>Singapore 768161</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Email :</b> lgoh_argol@singnet.com.sg<br/>sales_argol@singnet.com.sg</p>
-                        <p style={{ marginBottom: '1rem' }}><b>Website: </b>https://www.argol.com.sg</p>
-                        <p><b>Whatsapp :</b> (65) 9683 9120</p>
+                        <p style={{ fontSize: '16px', marginBottom: '0.3rem', marginTop: '0.6rem'}}>We welcome all enquires</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Wholesaling / Distributing</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Volume / Quantity Purchases</p>
+                        <p style={{ marginBottom: '0.2rem' }}>* Private / Generic Branding</p>
+                        <p style={{marginTop: '0.8rem', marginBottom: '0.4rem'}}>Kindly email / Whatsapp</p>
+                        <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '0.6rem' }}>
+                            <p style={{ marginRight: '0.4rem' }}>Email :</p>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <p style={{ marginBottom: '0.2rem' }}>lgoh_argol@singnet.com.sg</p>
+                                <p>sales_argol@singnet.com.sg</p>
+                            </div>
+                        </div>
+                        <p style={{marginBottom: '0.4rem'}}><b>Whatsapp :</b> (65) 9683 9120</p>
+                        <p ><b>Website: </b>https://www.argol.com.sg</p>
                     </MobileContent>
                 </MobileContainer>
             </Fragment>
@@ -142,7 +161,7 @@ const ContactUs = () => {
         <Fragment>
             {mobileView ? displayMobile() : displayDesktop()}
         </Fragment>
-    )   
+    )
 }
 
 export default ContactUs
