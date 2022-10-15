@@ -961,7 +961,7 @@ const Sizing = styled.div`
 display: flex;
 justify-content: center;
 text-align: center;
-width: 100%;
+width: 110%;
 height: auto;
 `
 
@@ -1136,7 +1136,7 @@ const Catalogue = () => {
                                                 <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
                                                     <th style={{ border: '1px solid black' }}>Cat No.</th>
                                                     <th style={{ border: '1px solid black' }}>Size</th>
-                                                    <th style={{ border: '1px solid black' }}>Quantity</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
                                                 </tr>
                                             </thead>
                                             {data?.sizing?.map((size) => {
@@ -1176,7 +1176,7 @@ const Catalogue = () => {
                                             <td style={{ border: '1px solid black' }}>{item.size}</td>
                                         </tr>
                                         <tr>
-                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Qty/Carton</th>
+                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Quantity / Carton</th>
                                             <td style={{ border: '1px solid black' }}>{item.quantity}</td>
                                         </tr>
                                     </table>
@@ -1228,7 +1228,7 @@ const Catalogue = () => {
                                                 <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
                                                     <th style={{ border: '1px solid black' }}>Cat No.</th>
                                                     <th style={{ border: '1px solid black' }}>Size</th>
-                                                    <th style={{ border: '1px solid black' }}>Quantity</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
                                                 </tr>
                                             </thead>
                                             {data?.sizing?.map((size) => {
@@ -1268,7 +1268,7 @@ const Catalogue = () => {
                                             <td style={{ border: '1px solid black' }}>{item.size}</td>
                                         </tr>
                                         <tr>
-                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Qty/Carton</th>
+                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Quantity / Carton</th>
                                             <td style={{ border: '1px solid black' }}>{item.quantity}</td>
                                         </tr>
                                     </table>
