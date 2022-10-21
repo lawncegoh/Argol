@@ -79,7 +79,7 @@ const NewProducts = () => {
                 <Container>
                     <img src={Logo1} style={{ height: '75px', width: '100px', marginRight: '0.5rem' }} alt='Logo' />
                     <Content>Under Construction</Content>
-                    <Content style={{color: 'red', marginTop: '0.4rem'}}>(Should be ready by 1 Nov 2022)</Content>
+                    <Content style={{color: 'red', marginTop: '0.4rem'}}>(Should be ready by Nov 2022)</Content>
                 </Container>
             </Fragment>
         )
@@ -92,7 +92,7 @@ const NewProducts = () => {
                 <MobileContainer>
                     <img style={{ width: '35%', height: '20%' }} src={Logo1} alt='Argol' />
                     <MobileContent>Under Construction</MobileContent>
-                    <MobileContent style={{color: 'red', marginTop: '0.4rem'}}>(Should be ready by 1 Nov 2022)</MobileContent>
+                    <MobileContent style={{color: 'red', marginTop: '0.4rem'}}>(Should be ready by Nov 2022)</MobileContent>
                 </MobileContainer>
             </Fragment>
         )
