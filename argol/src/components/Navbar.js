@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react'
+import React, { useEffect, useState, Fragment, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import {
@@ -70,6 +70,25 @@ text-decoration: none;
 color: black;
 `
 
+const DropDown = styled.div`
+position: relative;
+`
+
+const DropDownMenu = styled.div`
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+left: 0;
+background-color: #fffef0;
+width: 150px;
+height: 80px;
+padding: .75rem;
+box-shadow: 0 5px 10px 0 rgba(0,0,0, .2)
+`
+
+
+
 const Navbar = () => {
     const [state, setState] = useState({
         mobileView: false,
@@ -92,7 +111,41 @@ const Navbar = () => {
         }
     }, []);
 
-    const displayDesktop = () => {
+    // const displayDesktop = () => {
+    //     return (
+    //         <Container>
+    //             <LinksContainer>
+    //                 <a href='/'><img src={Logo} style={{ height: '75px', width: '100px' }} alt='Logo' /></a>
+    //                 <Links className='navigationLinks' href='/'>Home</Links>
+    //                 <Links href='/aboutus'>About Us</Links>
+    //                 <Links href='/catalogue'>Products</Links>
+    //                 <Links href='/new-products'>New Products</Links>
+    //                 <Links href='/contactus'>Contact Us</Links>
+    //             </LinksContainer>
+    //         </Container>
+    //     )
+    // }
+    
+    
+    const DisplayDesktop = () => {
+        // const [openDropDown, setOpenDropDown] = useState('false')
+        
+        // let menuRef = useRef();
+
+        // useEffect(() => {
+        //     const dropDownHandler = (e) => {
+        //         if (!menuRef.current.contains(e.target)) {
+        //             setOpenDropDown(false)
+        //         }
+        //     }
+            
+        //     document.addEventListener("mousedown", dropDownHandler)
+
+        //     return (
+        //         document.removeEventListener("mousedown", dropDownHandler)
+        //     )
+        // })
+
         return (
             <Container>
                 <LinksContainer>
@@ -100,7 +153,21 @@ const Navbar = () => {
                     <Links className='navigationLinks' href='/'>Home</Links>
                     <Links href='/aboutus'>About Us</Links>
                     <Links href='/catalogue'>Products</Links>
-                    <Links href='/new-products'>New Products</Links>
+
+                    {/* Drop-down */}
+                    {/* <DropDown ref={menuRef}>
+                        <p onClick={() => setOpenDropDown(!openDropDown)}>New Products</p>
+                        
+                        
+                        { openDropDown &&
+                            <DropDownMenu >
+                                <a style={{textDecoration: 'none', color: 'black'}} href='/new-products/paint-rollers'>Paint Rollers</a>
+                                <a style={{textDecoration: 'none', color: 'black'}} href='/new-products/paint-brushes'>Paint Brushes</a>
+                            </DropDownMenu>
+                        }
+
+
+                    </DropDown> */}
                     <Links href='/contactus'>Contact Us</Links>
                 </LinksContainer>
             </Container>
@@ -142,7 +209,7 @@ const Navbar = () => {
                             <div>
                                 <p style={{ marginLeft: '1rem', marginTop: '1rem' }} onClick={closeNavbar}><FontAwesomeIcon style={{ marginRight: '0.4rem' }} icon={faAngleLeft} onClick={closeNavbar} />Back</p>
                             </div>
-                            <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'space-between', height: '30%', marginTop: '2rem', width: 'auto'}}>
+                            <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'space-between', height: '30%', marginTop: '2rem', width: 'auto' }}>
                                 <MobileLinks className='navigationLinks' href='/'>Home</MobileLinks>
                                 <MobileLinks href='/aboutus'>About Us</MobileLinks>
                                 <MobileLinks href='/catalogue'>Products</MobileLinks>
@@ -159,7 +226,7 @@ const Navbar = () => {
 
     return (
         <Fragment>
-            {mobileView ? displayMobile() : displayDesktop()}
+            {mobileView ? displayMobile() : DisplayDesktop()}
         </Fragment>
     )
 }

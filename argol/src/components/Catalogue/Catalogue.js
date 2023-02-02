@@ -579,6 +579,38 @@ const paintbrush_Data = [
         ]
     },
     {
+        model: "TaskMaster",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/TaskMaster6.png'),
+        description: [
+            {
+                value: "Suitable for all paints"
+            },
+            {
+                value: "Ideal for interior painting"
+            },
+            {
+                value: "Differentiated fabric yarn knitting"
+            },
+            {
+                value: "Good paint absorption & holding"
+            },
+            {
+                value: "Paint dispersions enhance smooth & bigger areas"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "15 160 00",
+                size: '6" TaskMaster Jumbo Refill',
+                quantity: "200 pcs",
+                background_colour: "#fff"
+            }
+        ]
+    },
+    {
         model: "Classic Range Refill",
         LogoUrl: require('../../assets/logo1.png'),
         height: '110px',
@@ -737,6 +769,35 @@ const paintbrush_Data = [
             {
                 catNo: "6 103 150",
                 size: '6" Jumbo Refill, Elitakolor',
+                quantity: "200 pcs",
+                background_colour: "#fff"
+            },
+        ]
+    },
+    {
+        model: "Elitakolor Range",
+        LogoUrl: require('../../assets/FurstLogo.png'),
+        height: '100px',
+        width: '130px',
+        imageUrl: require('../../assets/products/Elitakolor6Extra.png'),
+        description: [
+            {
+                value: "Formulated and ideal for Enamel & Gloss paints"
+            },
+            {
+                value: "Good paint absorption, holding & dispersion"
+            },
+            {
+                value: "Highly minimised paint splattering during rolling"
+            },
+            {
+                value: "Enhancing fine and smooth coats"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "6 103 1011",
+                size: '6" Jumbo Refill, Elitakolor extra short pile',
                 quantity: "200 pcs",
                 background_colour: "#fff"
             },
@@ -907,6 +968,41 @@ const AllMasterRollers = [
     },
 ]
 
+const TelescopicPole = [
+    {
+        model: "Telescopic Pole",
+        imageUrl: require('../../assets/products/TelescopicPole.png'),
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '100px',
+        width: '130px',
+        description: [
+            {
+                value: "Light but durable"
+            },
+            {
+                value: "Compact with reliable locking"
+            },
+            {
+                value: "Material looks similar but differentiated from standard"
+            }
+        ],
+        sizing: [
+            {
+                catNo: '21 091 22',
+                size: '2 mtr 2 insertions Telescopic Pole',
+                quantity: '10 pcs',
+                background_colour: '#fff'
+            },
+            {
+                catNo: '21 091 43',
+                size: '4 mtr 3 insertions Telescopic Pole',
+                quantity: '10 pcs',
+                background_colour: '#ffff99'
+            },
+        ]
+    }
+]
+
 const Container = styled.div`
 width: 80%;
 height: 100%;
@@ -937,7 +1033,6 @@ flex-direction: row;
 justify-content: space-between;
 width: 100%;
 margin: auto;
-
 `
 
 const Description = styled.div`
@@ -959,6 +1054,7 @@ height: 70%;
 
 const Sizing = styled.div`
 display: flex;
+flex-direction: column;
 justify-content: center;
 text-align: center;
 width: 110%;
@@ -1071,6 +1167,26 @@ const styling = {
         flexDirection: 'column',
         margin: 'auto',
         textAlign: 'center'
+    },
+    SKU: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight: 'bold',
+        height: '32px',
+        borderTop: '2px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
+    },
+    additionalInfo: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingLeft: '20px',
+        height: '30px',
+        borderBottom: '2px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
     }
 }
 
@@ -1109,7 +1225,7 @@ const Catalogue = () => {
                     return (
                         <Container>
                             {/* Model name */}
-                            <img src={data.LogoUrl} style={{ height: data.height , width: data.width , alignItems: 'center', margin: 'auto'}} alt='Logo' />
+                            <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
                             <Model>
                                 <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </Model>
@@ -1185,6 +1301,62 @@ const Catalogue = () => {
                         )
                     })}
                 </div>
+
+                <div>
+                    {TelescopicPole.map((data) => {
+                        return (
+                            <Container>
+                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                                <Model>
+                                    <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                </Model>
+
+                                <Content>
+                                    <Image src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.right}>
+                                        <div style={{ marginBottom: '5%' }}>
+                                            {data?.description?.map((description_data) => {
+                                                return (
+                                                    <Description>
+                                                        <ul>
+                                                            <li style={{ height: '45px' }}>{description_data.value}</li>
+                                                        </ul>
+                                                    </Description>
+                                                )
+                                            })}
+                                        </div>
+                                        <Sizing>
+                                            <span style={styling.SKU}>SKU</span>
+                                            <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                                <thead>
+                                                    <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                        <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                        <th style={{ border: '1px solid black' }}>Size</th>
+                                                        <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                    </tr>
+                                                </thead>
+                                                {data?.sizing?.map((size) => {
+                                                    return (
+                                                        <tbody style={{ backgroundColor: size.background_colour }}>
+                                                            <tr style={{ height: '30px' }}>
+                                                                <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    )
+                                                })}
+                                            </table>
+                                            <span style={styling.additionalInfo}>other available lengths: 3/5/6/10 metre. Indent basis.</span>
+                                        </Sizing>
+                                    </div>
+                                </Content>
+
+                            </Container>
+                        )
+                    })}
+                </div>
             </Fragment>
         )
     }
@@ -1201,7 +1373,7 @@ const Catalogue = () => {
                     return (
                         <MobileContainer>
                             {/* Model name */}
-                            <img src={data.LogoUrl} style={{height: '70px', width: '90px', margin: 'auto'}} alt='Logo' />
+                            <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
                             <MobileModel>
                                 <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
                             </MobileModel>
@@ -1257,7 +1429,7 @@ const Catalogue = () => {
                         return (
                             <Fragment>
                                 <div style={styling.MobileAllMasterRollers}>
-                                    <img style={{ width: '90%', margin: 'auto', marginBottom: '2rem' }} src={item.imageUrl} alt='All Master Rollers'/>
+                                    <img style={{ width: '90%', margin: 'auto', marginBottom: '2rem' }} src={item.imageUrl} alt='All Master Rollers' />
                                     <table style={{ marginBottom: '4rem', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK', width: '100%', margin: 'auto' }}>
                                         <tr>
                                             <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Cat. No.</th>
