@@ -2,6 +2,8 @@ import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 
+import brush from '../../assets/products/brush.jpg'
+
 const paintbrush_Data = [
     {
         model: "DeLuxe Flat Paint Brush",
@@ -1357,6 +1359,8 @@ const Catalogue = () => {
                         )
                     })}
                 </div>
+
+                <img src={brush} style={{display: 'flex', justifyContent: 'center', margin: 'auto', width: '40%', marginBottom: '3rem'}} alt="Wax Brushes"/>
             </Fragment>
         )
     }
@@ -1449,6 +1453,8 @@ const Catalogue = () => {
                         )
                     })}
                 </div>
+                <img src={brush} style={{display: 'flex', justifyContent: 'center', margin: 'auto', width: '80%', marginBottom: '3rem'}} alt="Wax Brushes"/>
+
             </Fragment>
         )
     }
