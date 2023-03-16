@@ -168,6 +168,7 @@ const Navbar = () => {
 
 
                     </DropDown> */}
+                    <Links href='/new-products'>New Products</Links>
                     <Links href='/contactus'>Contact Us</Links>
                 </LinksContainer>
             </Container>

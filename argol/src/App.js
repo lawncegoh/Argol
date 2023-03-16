@@ -7,8 +7,6 @@ import ContactUs from './components/Contact Us/ContactUs';
 import AboutUs from './components/About Us/AboutUs';
 import Footer from './components/Footer/Footer';
 import NewProducts from './components/New Products/NewProducts';
-import PaintRollerProducts from './components/New Products/PaintRollers/PaintRollerProducts';
-import PaintBrushProducts from './components/New Products/PaintBrushes/PaintBrushProducts';
 // import Construction from './components/Construction/Construction';
 
 const App = () => {
@@ -20,8 +18,6 @@ const App = () => {
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/new-products' element={<NewProducts/>}/>
-        <Route path='/new-products/paint-rollers' element={<PaintRollerProducts/>}/>
-        <Route path='/new-products/paint-brushes' element={<PaintBrushProducts/>}/>
         <Route path='*' element={<LandingPage/>}/>
       </Routes>
       <Footer/>
