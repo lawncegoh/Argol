@@ -28,37 +28,37 @@ const paintbrush_Data = [
         sizing: [
             {
                 catNo: "67 113",
-                size: "0.5",
+                size: '0.5"',
                 quantity: "12 doz",
                 background_colour: "#ffffff"
             },
             {
                 catNo: "67 125",
-                size: "1",
+                size: '1"',
                 quantity: "12 doz",
                 background_colour: "#ffff99"
             },
             {
                 catNo: "67 138",
-                size: "1.5",
+                size: '1.5"',
                 quantity: "12 doz",
                 background_colour: "#ffffff"
             },
             {
                 catNo: "67 150",
-                size: "2",
+                size: '2"',
                 quantity: "12 doz",
                 background_colour: "#ffff99"
             },
             {
                 catNo: "67 163",
-                size: "2.5",
+                size: '2.5"',
                 quantity: "6 doz",
                 background_colour: "#ffffff"
             },
             {
                 catNo: "67 175",
-                size: "3",
+                size: '3"',
                 quantity: "6 doz",
                 background_colour: "#ffff99"
             },
