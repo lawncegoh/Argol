@@ -28,7 +28,7 @@ const paintbrush_Data = [
         sizing: [
             {
                 catNo: "67 113",
-                size: '0.5"',
+                size: '1\u00BD"',
                 quantity: "12 doz",
                 background_colour: "#ffffff"
             },
@@ -40,7 +40,7 @@ const paintbrush_Data = [
             },
             {
                 catNo: "67 138",
-                size: '1.5"',
+                size: '1\u00BD""',
                 quantity: "12 doz",
                 background_colour: "#ffffff"
             },
@@ -52,7 +52,7 @@ const paintbrush_Data = [
             },
             {
                 catNo: "67 163",
-                size: '2.5"',
+                size: '2\u00BD"',
                 quantity: "6 doz",
                 background_colour: "#ffffff"
             },
@@ -90,7 +90,7 @@ const paintbrush_Data = [
         sizing: [
             {
                 catNo: "67 015",
-                size: '1.5"',
+                size: '1\u00BD"',
                 quantity: "12 doz",
                 background_color: "#fff"
             },
@@ -102,7 +102,7 @@ const paintbrush_Data = [
             },
             {
                 catNo: "67 025",
-                size: '2.5"',
+                size: '2\u00BD"',
                 quantity: "6 doz",
                 background_colour: "#fff"
             }
@@ -738,7 +738,7 @@ const paintbrush_Data = [
         sizing: [
             {
                 catNo: "45 103 11",
-                size: '4.5" Mini Jumbo Refill, Elitakolor',
+                size: '4\u00BD" Mini Jumbo Refill, Elitakolor',
                 quantity: "240 pcs",
                 background_colour: "#fff"
             },
