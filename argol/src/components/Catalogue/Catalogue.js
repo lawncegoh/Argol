@@ -1045,6 +1045,7 @@ letter-spacing: 1px;
 list-style-position: outside;
 margin-left: 1.2rem;
 font-size: 18px;
+font-weight: bold;
 `
 
 
@@ -1061,6 +1062,7 @@ justify-content: center;
 text-align: center;
 width: 110%;
 height: auto;
+font-weight: bold;
 `
 
 const MobileContainer = styled.div`
@@ -1102,6 +1104,7 @@ list-style-position: outside;
 margin-left: 1.2rem;
 margin-bottom: 3px;
 font-size: 16px;
+font-weight: bold;
 `
 
 const MobileSizing = styled.div`
@@ -1110,6 +1113,7 @@ justify-content: center;
 text-align: center;
 width: 100%;
 margin-top: 2rem;
+font-weight: bold;
 `
 
 const MobileImage = styled.img`

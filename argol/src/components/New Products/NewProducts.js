@@ -69,6 +69,7 @@ letter-spacing: 1px;
 list-style-position: outside;
 margin-left: 1.2rem;
 font-size: 18px;
+font-weight: bold;
 `
 
 
