@@ -6,6 +6,46 @@ import brush from '../../assets/products/brush.jpg'
 
 const paintbrush_Data = [
     {
+        range: "Contractor",
+        rangeSub: "grade",
+        model: "Flat Paint Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/Contractor.jpg'),
+        description: [
+            {
+                value: "Suitable for oil-based paints"
+            },
+            {
+                value: "Ideal for water-based / latex paints"
+            },
+            {
+                value: "Wood Handle"
+            },
+            {
+                value: "Chinese elite pure bristles"
+            },
+            {
+                value: "Bristles durable to wears & abrasions"
+            }
+        ],
+        sizing: [
+            {
+                catNo: "972 15 21",
+                size: '1\u00BD"',
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "972 20 21",
+                size: '2"',
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+        ]
+    },
+    {
         model: "DeLuxe Flat Paint Brush",
         LogoUrl: require('../../assets/logo1.png'),
         height: '110px',
@@ -1014,7 +1054,7 @@ flex-direction: column;
 `
 
 const Model = styled.div`
-width: 40%;
+width: 45%;
 margin: auto;
 display: flex;
 justify-content: center;
@@ -1233,7 +1273,7 @@ const Catalogue = () => {
                             {/* Model name */}
                             <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
                             <Model>
-                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
                             </Model>
                             {/* Main content (image and description) */}
                             <Content>
@@ -1383,7 +1423,7 @@ const Catalogue = () => {
                             {/* Model name */}
                             <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
                             <MobileModel>
-                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
                             </MobileModel>
                             {/* Main content (image and description) */}
                             <MobileContent>
