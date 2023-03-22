@@ -7,7 +7,9 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: auto;
     background-size:cover;
     padding-bottom: 30px;
@@ -21,6 +23,8 @@ const MobileContainer = styled.div`
     width: 100%;
     height: 75vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: auto;
     background-size:cover;
@@ -28,7 +32,7 @@ const MobileContainer = styled.div`
 `
 
 const MobileImage = styled.img`
-width: 100%;
+width: 60%;
 `
 
 const LandingPage = () => {
@@ -59,6 +63,7 @@ const LandingPage = () => {
             <Fragment>
                 <Navbar />
                 <Container>
+                    <span style={{fontSize: '26px', fontWeight: 'bold', marginBottom: '1rem'}}>www.argol.com.sg</span>
                     <Image src={Cover} />
                 </Container>
             </Fragment>
@@ -70,6 +75,7 @@ const LandingPage = () => {
             <Fragment>
                 <Navbar />
                 <MobileContainer>
+                    <span style={{fontSize: '26px', fontWeight: 'bold', marginBottom: '1rem'}}>www.argol.com.sg</span>
                     <MobileImage src={Cover} />
                 </MobileContainer>
             </Fragment>
