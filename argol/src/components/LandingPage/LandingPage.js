@@ -32,7 +32,7 @@ const MobileContainer = styled.div`
 `
 
 const MobileImage = styled.img`
-width: 60%;
+width: 100%;
 `
 
 const LandingPage = () => {
@@ -63,7 +63,7 @@ const LandingPage = () => {
             <Fragment>
                 <Navbar />
                 <Container>
-                    <span style={{fontSize: '26px', fontWeight: 'bold', marginBottom: '1rem'}}>www.argol.com.sg</span>
+                    <span style={{fontSize: '18px', fontWeight: 'bold', marginBottom: '0.6rem'}}>www.argol.com.sg</span>
                     <Image src={Cover} />
                 </Container>
             </Fragment>
@@ -75,7 +75,7 @@ const LandingPage = () => {
             <Fragment>
                 <Navbar />
                 <MobileContainer>
-                    <span style={{fontSize: '26px', fontWeight: 'bold', marginBottom: '1rem'}}>www.argol.com.sg</span>
+                    <span style={{fontSize: '18px', fontWeight: 'bold', alignItems: 'left'}}>www.argol.com.sg</span>
                     <MobileImage src={Cover} />
                 </MobileContainer>
             </Fragment>
