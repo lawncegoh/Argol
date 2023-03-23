@@ -1059,7 +1059,7 @@ margin: auto;
 display: flex;
 justify-content: center;
 text-align: center;
-margin-bottom: 6rem;
+margin-bottom: 2.5rem;
 background-color: #e9851c;
 height: 80px;
 box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
