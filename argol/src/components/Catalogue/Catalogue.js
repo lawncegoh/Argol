@@ -1053,6 +1053,16 @@ display: flex;
 flex-direction: column;
 `
 
+const MobileContainerx = styled.div`
+width: 80%;
+height: 100%;
+margin: 4rem auto 15rem;
+display: flex;
+flex-direction: column;
+`
+
+
+
 const Model = styled.div`
 width: 45%;
 margin: auto;
@@ -1077,6 +1087,14 @@ width: 100%;
 margin: auto;
 `
 
+const MobileContentx = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 100%;
+margin: auto;
+`
+
 const Description = styled.div`
 display: flex;
 flex-direction: column;
@@ -1096,6 +1114,16 @@ height: 70%;
 
 
 const Sizing = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+width: 110%;
+height: auto;
+font-weight: bold;
+`
+
+const MobileSizingx = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -1160,6 +1188,10 @@ const MobileImage = styled.img`
 width: 90%;
 height: 70%;
 `
+const MobileImagex = styled.img`
+width: 90%;
+height: 80%;
+`
 
 const Header = styled.div`
 width: 80%;
@@ -1190,6 +1222,13 @@ const styling = {
         display: 'flex',
         flexDirection: 'column',
         width: '40%',
+        justifyContent: 'space-around',
+        marginTop: '1rem',
+    },
+    rightx: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100%',
         justifyContent: 'space-around',
         marginTop: '1rem',
     },
@@ -1497,6 +1536,64 @@ const Catalogue = () => {
                         )
                     })}
                 </div>
+
+
+                <div>
+                    {TelescopicPole.map((data) => {
+                        return (
+                            <MobileContainerx>
+                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                                <Model>
+                                    <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                </Model>
+
+                                <MobileContentx>
+                                    <MobileImagex src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.rightx}>
+                                        <div style={{ marginBottom: '5%' }}>
+                                            {data?.description?.map((description_data) => {
+                                                return (
+                                                    <Description>
+                                                        <ul>
+                                                            <li style={{ height: '45px' }}>{description_data.value}</li>
+                                                        </ul>
+                                                    </Description>
+                                                )
+                                            })}
+                                        </div>
+                                        <MobileSizingx>
+                                            <span style={styling.SKU}>SKU</span>
+                                            <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                                <thead>
+                                                    <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                        <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                        <th style={{ border: '1px solid black' }}>Size</th>
+                                                        <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                    </tr>
+                                                </thead>
+                                                {data?.sizing?.map((size) => {
+                                                    return (
+                                                        <tbody style={{ backgroundColor: size.background_colour }}>
+                                                            <tr style={{ height: '30px' }}>
+                                                                <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    )
+                                                })}
+                                            </table>
+                                            <span style={styling.additionalInfo}>other available lengths: 3/5/6/10 metre. Indent basis.</span>
+                                        </MobileSizingx>
+                                    </div>
+                                </MobileContentx>
+
+                            </MobileContainerx>
+                        )
+                    })}
+                </div>
+
                 <img src={brush} style={{display: 'flex', justifyContent: 'center', margin: 'auto', width: '80%', marginBottom: '3rem'}} alt="Wax Brushes"/>
 
             </Fragment>
