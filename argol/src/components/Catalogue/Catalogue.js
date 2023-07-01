@@ -838,7 +838,7 @@ const paintbrush_Data = [
         ],
         sizing: [
             {
-                catNo: "6 103 1011",
+                catNo: "6 103 011",
                 size: '6" Jumbo Refill, Elitakolor extra short pile',
                 quantity: "200 pcs",
                 background_colour: "#fff"
@@ -1336,7 +1336,7 @@ const Catalogue = () => {
                                             <thead>
                                                 <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
                                                     <th style={{ border: '1px solid black' }}>Cat No.</th>
-                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black' }}>Description</th>
                                                     <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
                                                 </tr>
                                             </thead>
@@ -1485,8 +1485,8 @@ const Catalogue = () => {
                                         <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
                                             <thead>
                                                 <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
-                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
-                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black', width: '80px' }}>Cat No.</th>
+                                                    <th style={{ border: '1px solid black' }}>Description</th>
                                                     <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
                                                 </tr>
                                             </thead>
