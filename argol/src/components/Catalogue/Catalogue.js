@@ -1054,9 +1054,9 @@ flex-direction: column;
 `
 
 const MobileContainerx = styled.div`
-width: 80%;
+width: 90%;
 height: 100%;
-margin: 4rem auto 15rem;
+margin: 4rem auto 10rem;
 display: flex;
 flex-direction: column;
 `
@@ -1128,7 +1128,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;
-width: 110%;
+width: 100%;
 height: auto;
 font-weight: bold;
 `
@@ -1268,7 +1268,7 @@ const styling = {
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingLeft: '20px',
-        height: '30px',
+        height: '50px',
         borderBottom: '2px solid black',
         borderLeft: '2px solid black',
         borderRight: '2px solid black',
@@ -1519,7 +1519,7 @@ const Catalogue = () => {
                                     <img style={{ width: '90%', margin: 'auto', marginBottom: '2rem' }} src={item.imageUrl} alt='All Master Rollers' />
                                     <table style={{ marginBottom: '4rem', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK', width: '100%', margin: 'auto' }}>
                                         <tr>
-                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef' }}>Cat. No.</th>
+                                            <th style={{ border: '1px solid black', backgroundColor: '#aaddef'}}>Cat. No.</th>
                                             <td style={{ border: '1px solid black' }}>{item.catNo}</td>
                                         </tr>
                                         <tr>
@@ -1543,9 +1543,9 @@ const Catalogue = () => {
                         return (
                             <MobileContainerx>
                                 <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
-                                <Model>
+                                <MobileModel>
                                     <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
-                                </Model>
+                                </MobileModel>
 
                                 <MobileContentx>
                                     <MobileImagex src={data.imageUrl} />
@@ -1567,7 +1567,7 @@ const Catalogue = () => {
                                             <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
                                                 <thead>
                                                     <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
-                                                        <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                        <th style={{ border: '1px solid black' , width: '80px'}}>Cat No.</th>
                                                         <th style={{ border: '1px solid black' }}>Size</th>
                                                         <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
                                                     </tr>
