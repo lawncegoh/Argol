@@ -705,8 +705,8 @@ const paintbrush_Data = [
     {
         model: "Lafustreif",
         LogoUrl: require('../../assets/FurstLogo.png'),
-        height: '100px',
-        width: '130px',
+        height: '95px',
+        width: '150px',
         imageUrl: require('../../assets/products/Lafustreif.png'),
         description: [
             {
@@ -743,8 +743,8 @@ const paintbrush_Data = [
     {
         model: "Elitakolor Range",
         LogoUrl: require('../../assets/FurstLogo.png'),
-        height: '100px',
-        width: '130px',
+        height: '95px',
+        width: '150px',
         imageUrl: require('../../assets/products/Elitakolor4.5.png'),
         description: [
             {
@@ -787,8 +787,8 @@ const paintbrush_Data = [
     {
         model: "Elitakolor Range",
         LogoUrl: require('../../assets/FurstLogo.png'),
-        height: '100px',
-        width: '130px',
+        height: '95px',
+        width: '150px',
         imageUrl: require('../../assets/products/Elitakolor6.png'),
         description: [
             {
@@ -819,8 +819,8 @@ const paintbrush_Data = [
     {
         model: "Elitakolor Range",
         LogoUrl: require('../../assets/FurstLogo.png'),
-        height: '100px',
-        width: '130px',
+        height: '95px',
+        width: '150px',
         imageUrl: require('../../assets/products/Elitakolor6Extra.png'),
         description: [
             {
@@ -848,8 +848,8 @@ const paintbrush_Data = [
     {
         model: "Elitakolor Range",
         LogoUrl: require('../../assets/FurstLogo.png'),
-        height: '100px',
-        width: '130px',
+        height: '95px',
+        width: '150px',
         imageUrl: require('../../assets/products/Elitakolor7.png'),
         description: [
             {
@@ -1460,7 +1460,7 @@ const Catalogue = () => {
                     return (
                         <MobileContainer>
                             {/* Model name */}
-                            <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
+                            <img src={data.LogoUrl} style={{ height: data.height, width: data.width, margin: 'auto' }} alt='Logo' />
                             <MobileModel>
                                 <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
                             </MobileModel>
