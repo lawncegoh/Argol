@@ -153,7 +153,7 @@ const testData = [
                 value: "Pile length. From 4mm - 25mm"
             },
             {
-                value: "Core diamter sizes. Range from 38mm - 54mm"
+                value: "Core diamter sizes. Range from 38mm - 45mm"
             },
             {
                 value: "Cage frames available"
