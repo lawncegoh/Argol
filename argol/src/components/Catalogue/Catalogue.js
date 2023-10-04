@@ -1014,7 +1014,7 @@ const TelescopicPole = [
     {
         model: "Telescopic Pole",
         imageUrl: require('../../assets/products/TelescopicPole.png'),
-        LogoUrl: require('../../assets/logo1.png'),
+        LogoUrl: require('../../assets/FurstLogo.png'),
         height: '100px',
         width: '130px',
         description: [
