@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import Navbar from '../Navbar';
 import styled from 'styled-components';
-import Cover from '../../assets/test2.png'
+import Cover from '../../assets/LandingPageImage.jpg'
 
 const Container = styled.div`
     width: 100%;
