@@ -169,6 +169,7 @@ const Navbar = () => {
 
                     </DropDown> */}
                     <Links href='/new-products'>New Products</Links>
+                    <Links href='/2023-new-products'>2023 Latest New Products</Links>
                     <Links href='/contactus'>Contact Us</Links>
                 </LinksContainer>
             </Container>
