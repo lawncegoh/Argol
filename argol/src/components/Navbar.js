@@ -216,6 +216,7 @@ const Navbar = () => {
                                 <MobileLinks href='/aboutus'>About Us</MobileLinks>
                                 <MobileLinks href='/catalogue'>Products</MobileLinks>
                                 <MobileLinks href='/new-products'>New Products</MobileLinks>
+                                <MobileLinks href='/2023-new-products'>2023 Latest New Products</MobileLinks>
                                 <MobileLinks href='/contactus'>Contact Us</MobileLinks>
                             </div>
                         </MobileNavbar>,
