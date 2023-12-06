@@ -230,7 +230,7 @@ const LatestNewProducts = () => {
             <Fragment>
                 <Navbar />
                 <Header>
-                    <p>Other Products</p>
+                    <p>Other Product</p>
                 </Header>
                 {brush.map((data) => {
                     return (
@@ -293,7 +293,7 @@ const LatestNewProducts = () => {
             <Fragment>
                 <Navbar />
                 <MobileHeader>
-                    <p>Products</p>
+                    <p>Product</p>
                 </MobileHeader>
                 {brush.map((data) => {
                     return (
