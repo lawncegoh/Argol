@@ -80,7 +80,7 @@ const paintbrush_Data = [
             },
             {
                 catNo: "67 138",
-                size: '1\u00BD""',
+                size: '1\u00BD"',
                 quantity: "12 doz",
                 background_colour: "#ffffff"
             },
