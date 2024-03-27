@@ -50,6 +50,33 @@ const brush = [
     },
 ]
 
+const testData = [
+    {
+        model: "Cage Refill",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/Classic7.jpg'),
+        description: [
+            {
+                value: "Thermo-fused/Thermo-bonded"
+            },
+            {
+                value: "Fabrics. Various Polyester to Polyamide"
+            },
+            {
+                value: "Pile length. From 4mm - 25mm"
+            },
+            {
+                value: "Core diamter sizes. Range from 38mm - 45mm"
+            },
+            {
+                value: "Cage frames available"
+            }
+        ],
+    },
+]
+
 
 const Container = styled.div`
 width: 80%;
@@ -284,6 +311,40 @@ const LatestNewProducts = () => {
                         </Container>
                     )
                 })}
+
+                <Fragment>
+                    {testData.map((data) => {
+                        return (
+                            <Container>
+                                {/* Model name */}
+                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                                <Model>
+                                    <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                                </Model>
+                                {/* Main content (image and description) */}
+                                <Content>
+                                    {/* Image */}
+                                    <Image src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.right}>
+                                        <div style={{ marginBottom: '5%' }}>
+                                            {data?.description?.map((description_data) => {
+                                                return (
+                                                    <Description>
+                                                        <ul>
+                                                            <li style={{ height: '45px' }}>{description_data.value}</li>
+                                                        </ul>
+                                                    </Description>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </Content>
+                            </Container>
+                        )
+
+                    })}
+                </Fragment>
             </Fragment>
         )
     }
@@ -301,7 +362,7 @@ const LatestNewProducts = () => {
                             {/* Model name */}
                             <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
                             <MobileModel>
-                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
+                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem' }}>{data.rangeSub}</sub> {data.model}</p>
                             </MobileModel>
                             {/* Main content (image and description) */}
                             <MobileContent>
@@ -347,6 +408,38 @@ const LatestNewProducts = () => {
                         </MobileContainer>
                     )
                 })}
+                <Fragment>
+                    {testData.map((data) => {
+                        return (
+                            <MobileContainer>
+                                {/* Model name */}
+                                <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
+                                <MobileModel>
+                                    <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem' }}>{data.rangeSub}</sub> {data.model}</p>
+                                </MobileModel>
+                                {/* Main content (image and description) */}
+                                <MobileContent>
+                                    {/* Image */}
+                                    <MobileImage src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.mobileRight}>
+                                        <div style={{ marginTop: '1.5rem' }}>
+                                            {data?.description?.map((description_data) => {
+                                                return (
+                                                    <MobileDescription>
+                                                        <ul>
+                                                            <li>{description_data.value}</li>
+                                                        </ul>
+                                                    </MobileDescription>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </MobileContent>
+                            </MobileContainer>
+                        )
+                    })}
+                </Fragment>
             </Fragment>
         )
     }

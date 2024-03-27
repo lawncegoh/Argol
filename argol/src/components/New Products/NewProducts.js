@@ -4,71 +4,6 @@ import Navbar from '../Navbar'
 
 const brush = [
     {
-        model: "HandyMan Flat Paint Brush",
-        LogoUrl: require('../../assets/logo1.png'),
-        height: '110px',
-        width: '140px',
-        imageUrl: require('../../assets/products/HandyManPaintBrush.png'),
-        description: [
-            {
-                value: "Suitable for all paints"
-            },
-            {
-                value: "Good blend of bristles"
-            },
-            {
-                value: "Plastic handle highly resistant to solvent, & good grip"
-            },
-            {
-                value: "Highly recommended for use in line cutting and trimming"
-            },
-        ],
-        sizing: [
-            {
-                catNo: "66 005",
-                size: '\u00BD"',
-                quantity: "12 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 010",
-                size: '1"',
-                quantity: "12 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 015",
-                size: '1\u00BD"',
-                quantity: "12 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 020",
-                size: '2"',
-                quantity: "12 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 025",
-                size: '2\u00BD"',
-                quantity: "6 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 030",
-                size: '3"',
-                quantity: "6 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 040",
-                size: '4"',
-                quantity: "6 doz",
-                background_colour: "#ffffff"
-            },
-        ]
-    },
-    {
         model: "JobMaster Flat Paint Brush",
         LogoUrl: require('../../assets/logo1.png'),
         height: '110px',
@@ -133,34 +68,154 @@ const brush = [
             },
         ]
     },
-]
-
-const testData = [
     {
-        model: "Cage Refill",
+        model: "JobMaster Range Refills",
         LogoUrl: require('../../assets/logo1.png'),
         height: '110px',
         width: '140px',
-        imageUrl: require('../../assets/products/Classic7.jpg'),
+        imageUrl: require('../../assets/products/JobMaster2MiniRefill.png'),
         description: [
             {
-                value: "Thermo-fused/Thermo-bonded"
+                value: "Enhanced Acrylic fabric"
             },
-            {
-                value: "Fabrics. Various Polyester to Polyamide"
-            },
-            {
-                value: "Pile length. From 4mm - 25mm"
-            },
-            {
-                value: "Core diamter sizes. Range from 38mm - 45mm"
-            },
-            {
-                value: "Cage frames available"
-            }
         ],
+        sizing: [
+            {
+                catNo: "50 170 00",
+                size: '2" Mini Refill, Blue Green stripe',
+                quantity: "1080 pcs",
+                background_colour: "#ffffff"
+            },
+        ]
+    },
+    {
+        model: "JobMaster Range Refills",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/JobMaster4MiniRefill.png'),
+        description: [
+            {
+                value: "Enhanced Acrylic fabric"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "10 170 00",
+                size: '4" Mini Refill, Blue Green stripe',
+                quantity: "540 pcs",
+                background_colour: "#ffffff"
+            },
+        ]
+    },
+    {
+        model: "JobMaster Range Refills",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/JobMaster6Refill.png'),
+        description: [
+            {
+                value: "Enhanced Acrylic fabric"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "15 180 00",
+                size: '6" Refill, Blue Green stripe',
+                quantity: "200 pcs",
+                background_colour: "#ffffff"
+            },
+        ]
+    },
+    {
+        model: "JobMaster Range Refills",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/JobMaster7Refill.png'),
+        description: [
+            {
+                value: "Enhanced Acrylic fabric"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "18 180 00",
+                size: '7" D8mm Refill, Blue Green stripe',
+                quantity: "100 pcs",
+                background_colour: "#ffffff"
+            },
+        ]
+    },
+    {
+        model: "HandyMan Flat Paint Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/HandyManPaintBrush.png'),
+        description: [
+            {
+                value: "Suitable for all paints"
+            },
+            {
+                value: "Good blend of bristles"
+            },
+            {
+                value: "Plastic handle highly resistant to solvent, & good grip"
+            },
+            {
+                value: "Highly recommended for use in line cutting and trimming"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "66 005",
+                size: '\u00BD"',
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 010",
+                size: '1"',
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 015",
+                size: '1\u00BD"',
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 020",
+                size: '2"',
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 025",
+                size: '2\u00BD"',
+                quantity: "6 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 030",
+                size: '3"',
+                quantity: "6 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 040",
+                size: '4"',
+                quantity: "6 doz",
+                background_colour: "#ffffff"
+            },
+        ]
     },
 ]
+
+
 
 const Container = styled.div`
 width: 80%;
@@ -341,7 +396,7 @@ const NewProducts = () => {
             <Fragment>
                 <Navbar />
                 <Header>
-                    <p>Other Products</p>
+                    <p style={{fontWeight: 'bold', color: '#1764c5', fontSize: '52px'}}>JobMaster Range</p>
                 </Header>
                 {brush.map((data) => {
                     return (
@@ -396,39 +451,7 @@ const NewProducts = () => {
                     )
                 })}
 
-                <Fragment>
-                    {testData.map((data) => {
-                        return (
-                            <Container>
-                                {/* Model name */}
-                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
-                                <Model>
-                                    <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
-                                </Model>
-                                {/* Main content (image and description) */}
-                                <Content>
-                                    {/* Image */}
-                                    <Image src={data.imageUrl} />
-                                    {/* Product description */}
-                                    <div style={styling.right}>
-                                        <div style={{ marginBottom: '5%' }}>
-                                            {data?.description?.map((description_data) => {
-                                                return (
-                                                    <Description>
-                                                        <ul>
-                                                            <li style={{ height: '45px' }}>{description_data.value}</li>
-                                                        </ul>
-                                                    </Description>
-                                                )
-                                            })}
-                                        </div>
-                                    </div>
-                                </Content>
-                            </Container>
-                        )
-
-                    })}
-                </Fragment>
+                
             </Fragment>
         )
     }
@@ -438,7 +461,7 @@ const NewProducts = () => {
             <Fragment>
                 <Navbar />
                 <MobileHeader>
-                    <p>Products</p>
+                    <p style={{fontWeight: 'bold', color: '#1764c5'}}>JobMaster Range</p>
                 </MobileHeader>
                 {brush.map((data) => {
                     return (
@@ -492,38 +515,6 @@ const NewProducts = () => {
                         </MobileContainer>
                     )
                 })}
-                <Fragment>
-                {testData.map((data) => {
-                    return (
-                        <MobileContainer>
-                            {/* Model name */}
-                            <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
-                            <MobileModel>
-                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
-                            </MobileModel>
-                            {/* Main content (image and description) */}
-                            <MobileContent>
-                                {/* Image */}
-                                <MobileImage src={data.imageUrl} />
-                                {/* Product description */}
-                                <div style={styling.mobileRight}>
-                                    <div style={{ marginTop: '1.5rem' }}>
-                                        {data?.description?.map((description_data) => {
-                                            return (
-                                                <MobileDescription>
-                                                    <ul>
-                                                        <li>{description_data.value}</li>
-                                                    </ul>
-                                                </MobileDescription>
-                                            )
-                                        })}
-                                    </div>
-                                </div>
-                            </MobileContent>
-                        </MobileContainer>
-                    )
-                })}
-                </Fragment>
             </Fragment>
         )
     }
