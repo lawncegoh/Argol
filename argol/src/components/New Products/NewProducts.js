@@ -2,6 +2,74 @@ import React, { useEffect, useState, Fragment } from 'react'
 import styled from 'styled-components'
 import Navbar from '../Navbar'
 
+const HandyManBrush = [
+{
+        model: "HandyMan Flat Paint Brush",
+        LogoUrl: require('../../assets/logo1.png'),
+        height: '110px',
+        width: '140px',
+        imageUrl: require('../../assets/products/HandyManPaintBrush.png'),
+        description: [
+            {
+                value: "Suitable for all paints"
+            },
+            {
+                value: "Good blend of bristles"
+            },
+            {
+                value: "Plastic handle highly resistant to solvent, & good grip"
+            },
+            {
+                value: "Highly recommended for use in line cutting and trimming"
+            },
+        ],
+        sizing: [
+            {
+                catNo: "66 005",
+                size: '\u00BD"',
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 010",
+                size: '1"',
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 015",
+                size: '1\u00BD"',
+                quantity: "12 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 020",
+                size: '2"',
+                quantity: "12 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 025",
+                size: '2\u00BD"',
+                quantity: "6 doz",
+                background_colour: "#ffffff"
+            },
+            {
+                catNo: "66 030",
+                size: '3"',
+                quantity: "6 doz",
+                background_colour: "#ffff99"
+            },
+            {
+                catNo: "66 040",
+                size: '4"',
+                quantity: "6 doz",
+                background_colour: "#ffffff"
+            },
+        ]
+    }
+]
+
 const brush = [
     {
         model: "JobMaster Flat Paint Brush",
@@ -147,72 +215,7 @@ const brush = [
                 background_colour: "#ffffff"
             },
         ]
-    },
-    {
-        model: "HandyMan Flat Paint Brush",
-        LogoUrl: require('../../assets/logo1.png'),
-        height: '110px',
-        width: '140px',
-        imageUrl: require('../../assets/products/HandyManPaintBrush.png'),
-        description: [
-            {
-                value: "Suitable for all paints"
-            },
-            {
-                value: "Good blend of bristles"
-            },
-            {
-                value: "Plastic handle highly resistant to solvent, & good grip"
-            },
-            {
-                value: "Highly recommended for use in line cutting and trimming"
-            },
-        ],
-        sizing: [
-            {
-                catNo: "66 005",
-                size: '\u00BD"',
-                quantity: "12 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 010",
-                size: '1"',
-                quantity: "12 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 015",
-                size: '1\u00BD"',
-                quantity: "12 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 020",
-                size: '2"',
-                quantity: "12 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 025",
-                size: '2\u00BD"',
-                quantity: "6 doz",
-                background_colour: "#ffffff"
-            },
-            {
-                catNo: "66 030",
-                size: '3"',
-                quantity: "6 doz",
-                background_colour: "#ffff99"
-            },
-            {
-                catNo: "66 040",
-                size: '4"',
-                quantity: "6 doz",
-                background_colour: "#ffffff"
-            },
-        ]
-    },
+    }
 ]
 
 
@@ -395,6 +398,60 @@ const NewProducts = () => {
         return (
             <Fragment>
                 <Navbar />
+
+               {HandyManBrush.map((data) => {
+                    return (
+                        <Container>
+                            {/* Model name */}
+                            <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                            <Model>
+                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>{data.model}</p>
+                            </Model>
+                            {/* Main content (image and description) */}
+                            <Content>
+                                {/* Image */}
+                                <Image src={data.imageUrl} />
+                                {/* Product description */}
+                                <div style={styling.right}>
+                                    <div style={{ marginBottom: '5%' }}>
+                                        {data?.description?.map((description_data) => {
+                                            return (
+                                                <Description>
+                                                    <ul>
+                                                        <li style={{ height: '45px' }}>{description_data.value}</li>
+                                                    </ul>
+                                                </Description>
+                                            )
+                                        })}
+                                    </div>
+                                    <Sizing>
+                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                </tr>
+                                            </thead>
+                                            {data?.sizing?.map((size) => {
+                                                return (
+                                                    <tbody style={{ backgroundColor: size.background_colour }}>
+                                                        <tr style={{ height: '30px' }}>
+                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                )
+                                            })}
+                                        </table>
+                                    </Sizing>
+                                </div>
+                            </Content>
+                        </Container>
+                    )
+                })}
+
                 <Header>
                     <p style={{fontWeight: 'bold', color: '#1764c5', fontSize: '52px'}}>JobMaster Range</p>
                 </Header>
@@ -460,6 +517,60 @@ const NewProducts = () => {
         return (
             <Fragment>
                 <Navbar />
+
+                {HandyManBrush.map((data) => {
+                    return (
+                        <MobileContainer>
+                            {/* Model name */}
+                            <img src={data.LogoUrl} style={{ height: '70px', width: '90px', margin: 'auto' }} alt='Logo' />
+                            <MobileModel>
+                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
+                            </MobileModel>
+                            {/* Main content (image and description) */}
+                            <MobileContent>
+                                {/* Image */}
+                                <MobileImage src={data.imageUrl} />
+                                {/* Product description */}
+                                <div style={styling.mobileRight}>
+                                    <div style={{ marginTop: '1.5rem' }}>
+                                        {data?.description?.map((description_data) => {
+                                            return (
+                                                <MobileDescription>
+                                                    <ul>
+                                                        <li>{description_data.value}</li>
+                                                    </ul>
+                                                </MobileDescription>
+                                            )
+                                        })}
+                                    </div>
+                                    <MobileSizing>
+                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                    <th style={{ border: '1px solid black' }}>Size</th>
+                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                </tr>
+                                            </thead>
+                                            {data?.sizing?.map((size) => {
+                                                return (
+                                                    <tbody style={{ backgroundColor: size.background_colour }}>
+                                                        <tr style={{ height: '25px' }}>
+                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                )
+                                            })}
+                                        </table>
+                                    </MobileSizing>
+                                </div>
+                            </MobileContent>
+                        </MobileContainer>
+                    )
+                })}
+
                 <MobileHeader>
                     <p style={{fontWeight: 'bold', color: '#1764c5'}}>JobMaster Range</p>
                 </MobileHeader>
