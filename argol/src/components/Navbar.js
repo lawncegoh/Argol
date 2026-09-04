@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment, useRef } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import {
@@ -68,23 +68,6 @@ color: #787878;
 const MobileLinks = styled.a`
 text-decoration: none;
 color: black;
-`
-
-const DropDown = styled.div`
-position: relative;
-`
-
-const DropDownMenu = styled.div`
-position: absolute;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-left: 0;
-background-color: #fffef0;
-width: 150px;
-height: 80px;
-padding: .75rem;
-box-shadow: 0 5px 10px 0 rgba(0,0,0, .2)
 `
 
 
