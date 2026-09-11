@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import styled from 'styled-components'
 import Navbar from '../Navbar'
+import FillingKnifes from '../../assets/products/FillingKnifes.png'
 
 const HandyManBrush = [
 {
@@ -348,6 +349,18 @@ width: 90%;
 height: 70%;
 `
 
+const BottomImage = styled.img`
+width: 60%;
+margin: 0 auto 8rem;
+display: block;
+`
+
+const MobileBottomImage = styled.img`
+width: 85%;
+margin: 0 auto 4rem;
+display: block;
+`
+
 const MobileHeader = styled.div`
 width: 80%;
 margin: 0rem auto 2rem;
@@ -508,7 +521,7 @@ const NewProducts = () => {
                     )
                 })}
 
-                
+                <BottomImage src={FillingKnifes} alt='Hammerhead Flexible Filling Knives' />
             </Fragment>
         )
     }
@@ -626,6 +639,8 @@ const NewProducts = () => {
                         </MobileContainer>
                     )
                 })}
+
+                <MobileBottomImage src={FillingKnifes} alt='Hammerhead Flexible Filling Knives' />
             </Fragment>
         )
     }
