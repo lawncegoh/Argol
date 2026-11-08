@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navbar from '../Navbar';
 
 import brush from '../../assets/products/brush.jpg'
+import FillingKnife from '../../assets/products/FillingKnife.png'
 
 const paintbrush_Data = [
     {
@@ -1193,6 +1194,24 @@ width: 90%;
 height: 80%;
 `
 
+const BottomImage = styled.img`
+width: 63%;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+display: block;
+object-fit: contain;
+`
+
+const MobileBottomImage = styled.img`
+width: 98%;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+display: block;
+object-fit: contain;
+`
+
 const Header = styled.div`
 width: 80%;
 margin: 0rem auto 3rem;
@@ -1308,54 +1327,65 @@ const Catalogue = () => {
                 </Header>
                 {paintbrush_Data.map((data) => {
                     return (
-                        <Container>
-                            {/* Model name */}
-                            <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
-                            <Model>
-                                <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
-                            </Model>
-                            {/* Main content (image and description) */}
-                            <Content>
-                                {/* Image */}
-                                <Image src={data.imageUrl} />
-                                {/* Product description */}
-                                <div style={styling.right}>
-                                    <div style={{ marginBottom: '5%' }}>
-                                        {data?.description?.map((description_data) => {
-                                            return (
-                                                <Description>
-                                                    <ul>
-                                                        <li style={{ height: '45px' }}>{description_data.value}</li>
-                                                    </ul>
-                                                </Description>
-                                            )
-                                        })}
-                                    </div>
-                                    <Sizing>
-                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
-                                            <thead>
-                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
-                                                    <th style={{ border: '1px solid black' }}>Cat No.</th>
-                                                    <th style={{ border: '1px solid black' }}>Description</th>
-                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
-                                                </tr>
-                                            </thead>
-                                            {data?.sizing?.map((size) => {
+                        <Fragment>
+                            <Container>
+                                {/* Model name */}
+                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                                <Model>
+                                    <p style={{ fontSize: '32px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
+                                </Model>
+                                {/* Main content (image and description) */}
+                                <Content>
+                                    {/* Image */}
+                                    <Image src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.right}>
+                                        <div style={{ marginBottom: '5%' }}>
+                                            {data?.description?.map((description_data) => {
                                                 return (
-                                                    <tbody style={{ backgroundColor: size.background_colour }}>
-                                                        <tr style={{ height: '30px' }}>
-                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
-                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
-                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
-                                                        </tr>
-                                                    </tbody>
+                                                    <Description>
+                                                        <ul>
+                                                            <li style={{ height: '45px' }}>{description_data.value}</li>
+                                                        </ul>
+                                                    </Description>
                                                 )
                                             })}
-                                        </table>
-                                    </Sizing>
-                                </div>
-                            </Content>
-                        </Container>
+                                        </div>
+                                        <Sizing>
+                                            <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                                <thead>
+                                                    <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                        <th style={{ border: '1px solid black' }}>Cat No.</th>
+                                                        <th style={{ border: '1px solid black' }}>Description</th>
+                                                        <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                    </tr>
+                                                </thead>
+                                                {data?.sizing?.map((size) => {
+                                                    return (
+                                                        <tbody style={{ backgroundColor: size.background_colour }}>
+                                                            <tr style={{ height: '30px' }}>
+                                                                <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    )
+                                                })}
+                                            </table>
+                                        </Sizing>
+                                    </div>
+                                </Content>
+                            </Container>
+                            {data.model === 'Classic Flat Paint Brush' && (
+                                <Container>
+                                    <img src={require('../../assets/logo1.png')} style={{ height: '110px', width: '140px', alignItems: 'center', margin: 'auto' }} alt='Logo' />
+                                    <Model style={{ width: '70%' }}>
+                                        <p style={{ fontSize: '28px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>Hammer-Head Flexible Filling Knife</p>
+                                    </Model>
+                                    <BottomImage src={FillingKnife} alt='Hammer-Head Flexible Filling Knife' />
+                                </Container>
+                            )}
+                        </Fragment>
                     )
                 })}
                 <Model>
@@ -1458,54 +1488,67 @@ const Catalogue = () => {
                 </MobileHeader>
                 {paintbrush_Data.map((data) => {
                     return (
-                        <MobileContainer>
-                            {/* Model name */}
-                            <img src={data.LogoUrl} style={{ height: data.height, width: data.width, margin: 'auto' }} alt='Logo' />
-                            <MobileModel>
-                                <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
-                            </MobileModel>
-                            {/* Main content (image and description) */}
-                            <MobileContent>
-                                {/* Image */}
-                                <MobileImage src={data.imageUrl} />
-                                {/* Product description */}
-                                <div style={styling.mobileRight}>
-                                    <div style={{ marginTop: '1.5rem' }}>
-                                        {data?.description?.map((description_data) => {
-                                            return (
-                                                <MobileDescription>
-                                                    <ul>
-                                                        <li>{description_data.value}</li>
-                                                    </ul>
-                                                </MobileDescription>
-                                            )
-                                        })}
-                                    </div>
-                                    <MobileSizing>
-                                        <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
-                                            <thead>
-                                                <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
-                                                    <th style={{ border: '1px solid black', width: '80px' }}>Cat No.</th>
-                                                    <th style={{ border: '1px solid black' }}>Description</th>
-                                                    <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
-                                                </tr>
-                                            </thead>
-                                            {data?.sizing?.map((size) => {
+                        <Fragment>
+                            <MobileContainer>
+                                {/* Model name */}
+                                <img src={data.LogoUrl} style={{ height: data.height, width: data.width, margin: 'auto' }} alt='Logo' />
+                                <MobileModel>
+                                    <p style={{ fontSize: '22px', letterSpacing: '1.5px', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>{data.range}<sub style={{ fontSize: '16px', fontStyle: 'italic', fontWeight: 'bold', paddingTop: '1.3rem', marginRight: '0.8rem'}}>{data.rangeSub}</sub> {data.model}</p>
+                                </MobileModel>
+                                {/* Main content (image and description) */}
+                                <MobileContent>
+                                    {/* Image */}
+                                    <MobileImage src={data.imageUrl} />
+                                    {/* Product description */}
+                                    <div style={styling.mobileRight}>
+                                        <div style={{ marginTop: '1.5rem' }}>
+                                            {data?.description?.map((description_data) => {
                                                 return (
-                                                    <tbody style={{ backgroundColor: size.background_colour }}>
-                                                        <tr style={{ height: '25px' }}>
-                                                            <td style={{ border: '1px solid black' }}>{size.catNo}</td>
-                                                            <td style={{ border: '1px solid black' }}>{size.size}</td>
-                                                            <td style={{ border: '1px solid black' }}>{size.quantity}</td>
-                                                        </tr>
-                                                    </tbody>
+                                                    <MobileDescription>
+                                                        <ul>
+                                                            <li>{description_data.value}</li>
+                                                        </ul>
+                                                    </MobileDescription>
                                                 )
                                             })}
-                                        </table>
-                                    </MobileSizing>
-                                </div>
-                            </MobileContent>
-                        </MobileContainer>
+                                        </div>
+                                        <MobileSizing>
+                                            <table style={{ width: '100%', borderSpacing: '0', overflowX: 'auto', justifySelf: 'auto', borderCollapse: 'collapse', border: '2px solid blaCK' }}>
+                                                <thead>
+                                                    <tr style={{ backgroundColor: '#aaddef', height: '25px' }}>
+                                                        <th style={{ border: '1px solid black', width: '80px' }}>Cat No.</th>
+                                                        <th style={{ border: '1px solid black' }}>Description</th>
+                                                        <th style={{ border: '1px solid black' }}>Quantity / Carton</th>
+                                                    </tr>
+                                                </thead>
+                                                {data?.sizing?.map((size) => {
+                                                    return (
+                                                        <tbody style={{ backgroundColor: size.background_colour }}>
+                                                            <tr style={{ height: '25px' }}>
+                                                                <td style={{ border: '1px solid black' }}>{size.catNo}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.size}</td>
+                                                                <td style={{ border: '1px solid black' }}>{size.quantity}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    )
+                                                })}
+                                            </table>
+                                        </MobileSizing>
+                                    </div>
+                                </MobileContent>
+                            </MobileContainer>
+                            {data.model === 'Classic Flat Paint Brush' && (
+                                <MobileContainer>
+                                    <img src={require('../../assets/logo1.png')} style={{ height: '70px', width: '90px', margin: '0 auto 1rem' }} alt='Logo' />
+                                    <MobileModel style={{ height: 'auto', minHeight: '60px', padding: '0.75rem 0.8rem', alignItems: 'center' }}>
+                                        <p style={{ fontSize: '16px', letterSpacing: '1px', lineHeight: '1.3', textAlign: 'center', margin: 0, width: '100%', wordBreak: 'break-word' }}>Hammer-Head Flexible Filling Knife</p>
+                                    </MobileModel>
+                                    <MobileContent>
+                                        <MobileBottomImage src={FillingKnife} alt='Hammer-Head Flexible Filling Knife' />
+                                    </MobileContent>
+                                </MobileContainer>
+                            )}
+                        </Fragment>
                     )
                 })}
                 <MobileModel style={{ width: '90%', margin: '0rem auto 1.5rem' }}>
