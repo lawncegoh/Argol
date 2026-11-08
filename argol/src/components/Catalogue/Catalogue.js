@@ -1539,7 +1539,7 @@ const Catalogue = () => {
                             </MobileContainer>
                             {data.model === 'Classic Flat Paint Brush' && (
                                 <MobileContainer>
-                                    <img src={require('../../assets/logo1.png')} style={{ height: '70px', width: '90px', margin: '0 auto 1rem' }} alt='Logo' />
+                                    <img src={require('../../assets/logo1.png')} style={{ height: '110px', width: '140px', margin: 'auto' }} alt='Logo' />
                                     <MobileModel style={{ height: 'auto', minHeight: '60px', padding: '0.75rem 0.8rem', alignItems: 'center' }}>
                                         <p style={{ fontSize: '16px', letterSpacing: '1px', lineHeight: '1.3', textAlign: 'center', margin: 0, width: '100%', wordBreak: 'break-word' }}>Hammer-Head Flexible Filling Knife</p>
                                     </MobileModel>
